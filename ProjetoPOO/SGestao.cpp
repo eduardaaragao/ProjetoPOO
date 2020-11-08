@@ -4,7 +4,6 @@
 
 SGestao::SGestao()
 {
-   // cout << "Passei em " << __FUNCTION__ << endl;
 
     //Inicia as lista, somente para teste, apagar depois
     Data B;
@@ -35,11 +34,14 @@ SGestao::SGestao()
 
 SGestao::~SGestao()
 {
-   // cout << "Passei em " << __FUNCTION__ << endl;
+    // Implemente o destrutor da classe SGestao, que obviamente deve libertar toda a memória ocupada.
+
 }
 
 bool SGestao::Load(const string &N_Ficheiro) 
 {
+    // 1. Carregar os dados de ficheiros, este método é fundamental!
+
     ifstream Ficheiro;
     Ficheiro.open(N_Ficheiro, ios::in);
     string AUX;
@@ -47,7 +49,7 @@ bool SGestao::Load(const string &N_Ficheiro)
 
     if(Ficheiro.is_open())
     {
-        while (getline(Ficheiro,AUX,Delimitador)) 
+        while (getline(Ficheiro, AUX, Delimitador)) 
         {
             //Terminar Quando tiver o ficheiro de dados
         }
@@ -82,3 +84,89 @@ void SGestao::Mostrar_L_Pessoas()
         ++it;
     }
 }
+
+int SGestao::Contar(Virus* X)
+{
+    // 2. Contar o número de vírus de um dado Tipo; 
+    return 0;
+}
+
+Pessoa* SGestao::PessoaMaisContagios()
+{
+    // 3. Determinar a pessoa que mais contágios provocou. 
+    return NULL;
+}
+
+bool SGestao::PessoaFonteContagio(const string& BI)
+{
+    // 4. Verificar se uma dada pessoa esteve na base de algum contágio; 
+    return true;
+}
+
+int SGestao::Memoria()
+{
+    // 5. Determinar toda a memória ocupada; 
+    return 0;
+}
+
+void SGestao::PessoasContagiadas(list<Pessoa*>& L)
+{
+    // 6. Determinar as pessoas que estão contagiadas. 
+}
+
+Virus* SGestao::VirusMaisActivo()
+{
+    // 7. Determinar qual o tipo de vírus que está mais activo; 
+    return NULL;
+}
+
+void SGestao::PessoasMaisUmVirus(list<Pessoa*>& L)
+{
+    //  8. Determinar as pessoas que podem ter mais do que um vírus; 
+}
+
+void SGestao::RemoverVirus(Virus* X)
+{
+    // 9. Pode acontecer que um dado vírus seja extinto!, então todas as pessoas que têm esse vírus devem ficar bem;
+}
+
+void SGestao::EscreverXML(const string& fich_xml)
+{
+    // 10. Gravar para ficheiro em formato XML um dado modelo; 
+
+}
+
+string SGestao::CidadeMaisCasos()
+{
+    // 12. Determinar a cidade que está a ser mais afetada; 
+    return NULL;
+}
+
+bool SGestao::AlertasAsPessoasProximas(int N, double R)
+{
+    // 13. Se N ou mais pessoas estiverem muito juntas (num raio inferior a R) as pessoas devem
+    // ser alertadas;
+    return true;
+}
+
+int SGestao::EscalaoIdadeMaisAfectado()
+{
+    //14. Determinar qual o escalão de idades mais afetada; (Considera Escala 0-[0,9]; 1-
+    //[10, 19] ; 2 - [20, 29]; etc
+    return 0;
+}
+
+list<Ponto*>* SGestao::PossivelIr_A_B(Ponto& A, Ponto& B)
+{
+    //Será que é possível ir de um ponto A a um ponto B sem passar por posições onde 
+    // estão pessoas infetadas ? Se for possível, deve devolver a lista das posições por onde se pode passar;
+    return NULL;
+}
+
+list<Ponto*>* SGestao::Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B)
+{
+    //Será que é possível ir de um ponto A a um ponto B sem passar por dentro de qualquer
+    //zona de contágio ? Se for possível, deve devolver a lista das posições por onde se pode passar;
+    return NULL;
+}
+

@@ -140,7 +140,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Pessoa.cpp" />
+    <ClCompile Include="Ponto.cpp" />
     <ClCompile Include="SGestao.cpp" />
     <ClCompile Include="Uteis.cpp" />
     <ClCompile Include="Virus.cpp" />
@@ -148,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="Data.h" />
     <ClInclude Include="Pessoa.h" />
+    <ClInclude Include="Ponto.h" />
     <ClInclude Include="SGestao.h" />
     <ClInclude Include="Virus.h" />
   </ItemGroup>

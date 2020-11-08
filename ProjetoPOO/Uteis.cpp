@@ -1,4 +1,5 @@
-#include "SGestao.h"
+#include <iostream>
+using namespace std;
 
 void MSG(string Mensagem)
 {

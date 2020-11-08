@@ -3,7 +3,7 @@
 Virus::Virus(string nome, short int raio_contagio, short int taxa_contagio, short int perigosidade, Data data_inicio)
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
-	Nome = nome;
+	Nome_Virus = nome;
 	Raio_Contagio = raio_contagio;
 	Taxa_Contagio = taxa_contagio;
 	Perigosidade = perigosidade;
@@ -17,5 +17,5 @@ Virus::~Virus()
 
 void Virus::Mostrar_Virus()
 {
-	cout << "\nNome: [" << Nome << "]\nRaio: [" << Raio_Contagio << "]\nTaxa de Contagio: [" << Taxa_Contagio << "]\nPerigosidade: [" << Perigosidade << "]\nData de Inicio: [" << Data_Inicio.Dia << "/" << Data_Inicio.Mes << "/" << Data_Inicio.Ano << "]" << endl;
+	cout << "\nNome: [" << Nome_Virus << "]\nRaio: [" << Raio_Contagio << "]\nTaxa de Contagio: [" << Taxa_Contagio << "]\nPerigosidade: [" << Perigosidade << "]\nData de Inicio: [" << Data_Inicio.Dia << "/" << Data_Inicio.Mes << "/" << Data_Inicio.Ano << "]" << endl;
 }

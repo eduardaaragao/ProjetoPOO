@@ -30,6 +30,12 @@
     <ClCompile Include="Uteis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ponto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGestao.h">
@@ -42,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ponto.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

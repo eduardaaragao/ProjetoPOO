@@ -8,7 +8,7 @@ using namespace std;
 #include <list>
 #include <fstream>
 
-//-----Exerterns-----
+//-----Externs-----
 extern void MSG(string Mensagem);
 
 class Virus
@@ -17,18 +17,19 @@ class Virus
 		friend class SGestao;
 		friend class Pessoa;
 		//-----Variaveis-----
-		string Nome;
-		short int Raio_Contagio;
+		string Nome_Virus;
+		double Raio_Contagio;
 		short int Taxa_Contagio;
 		short int Perigosidade;
 		Data Data_Inicio;
 		//-----Funcoes-----
+		string Get_Nome() { return Nome_Virus; }
+
 		Virus(string nome, short int raio_contagio, short int taxa_contagio, short int perigosidade, Data data_inicio);
 		virtual ~Virus();
+
 		void Mostrar_Virus();
-		string Get_Nome() { return Nome; }
 	public:
-	
 	
 };
 

@@ -1,11 +1,15 @@
 #include <iostream>
 #include "SGestao.h"
+#include "Virus.h"
 
+extern void Menu();
 int main()
 {
-	SGestao A;
+	/*SGestao A;
 	A.Mostrar_L_Virus();
-	A.Mostrar_L_Pessoas();
+	A.Mostrar_L_Pessoas();*/
+
+	Menu();
 	return 0;
 }
 
