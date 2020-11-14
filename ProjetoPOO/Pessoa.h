@@ -1,5 +1,6 @@
 #pragma once
 #include "Virus.h"
+#include "Ponto.h"
 
 class Pessoa
 {
@@ -10,10 +11,10 @@ class Pessoa
 		char* BI;
 		string Cidade;
 		unsigned short int Idade;
-		unsigned short int Coordenada_X, Coordenada_Y;
-		Virus* Virus_Infectado;
+		Ponto* Coordenada_Atual;
+		list<Virus*> Virus_Infectados;
 		//-----Funcoes-----
-		Pessoa(string nome, char* bi, string cidade, unsigned short int idade, unsigned short int coordenada_x, unsigned short int coordenada_y, Virus* virus_infectado);
+		Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado);
 		virtual ~Pessoa();
 		void Mostrar_Pessoa();
 	public:

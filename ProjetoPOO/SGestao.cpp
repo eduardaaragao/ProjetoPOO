@@ -22,13 +22,15 @@ SGestao::SGestao()
     char* BI = (char*)malloc(9 * sizeof(char)); 
     strcpy(BI,"12345678");
 
-    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30, 22, 55, A1);
+    Ponto* P = new Ponto(10,20);
+    
+    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30, P, NULL);
     Lista_Pessoas.push_back(C1);
-
-    Pessoa* C2 = new Pessoa("Rafael", BI, "Viseu", 24, 6, 87, A2);
+    
+    Pessoa* C2 = new Pessoa("Rafael", BI, "Viseu", 24, P, A2);
     Lista_Pessoas.push_back(C2);
 
-    Pessoa* C3 = new Pessoa("Ricardo", BI, "Porto", 55, 8, 66, A3);
+    Pessoa* C3 = new Pessoa("Ricardo", BI, "Porto", 55, P, A3);
     Lista_Pessoas.push_back(C3);
 }
 
@@ -41,18 +43,40 @@ SGestao::~SGestao()
 bool SGestao::Load(const string &N_Ficheiro) 
 {
     // 1. Carregar os dados de ficheiros, este método é fundamental!
-
+    // ESSA FUNÇÃO ESTA ERRADA, mas vou consertar
     ifstream Ficheiro;
     Ficheiro.open(N_Ficheiro, ios::in);
-    string AUX;
-    char Delimitador =';';
+
+    string Linha_Ficheiro, Variavel;
+    char Delimitador = '\t';
+
+    string Lista_Variaveis[4];
+    int Pos;
+    Pessoa* AUX_Pessoa;
 
     if(Ficheiro.is_open())
     {
-        while (getline(Ficheiro, AUX, Delimitador)) 
+
+        while (getline(Ficheiro, Linha_Ficheiro))
         {
-            //Terminar Quando tiver o ficheiro de dados
+            istringstream AUX_Linha_Ficheiro(Linha_Ficheiro);
+            Pos = 0;
+            while (getline(AUX_Linha_Ficheiro, Variavel,Delimitador))
+            {
+                Lista_Variaveis[Pos] = Variavel;
+                ++Pos;
+            }
+            cout << Lista_Variaveis[0] << "\n" << Lista_Variaveis[1] << "\n" << Lista_Variaveis[2] << "\n" << Lista_Variaveis[3] << "\n\n";
+           // string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado
+            Ponto* P = new Ponto(10, 20);
+            char* BI = (char*)malloc(9 * sizeof(char));
+            strcpy(BI, "12345678");
+            AUX_Pessoa = new Pessoa(Lista_Variaveis[1], BI, Lista_Variaveis[2],10,P,NULL);
+            Lista_Pessoas.push_back(AUX_Pessoa);
+
+
         }
+
         return true;
     }
     else

@@ -1,2 +1,4 @@
-﻿  Menu.cpp
-  ProjetoPOO.vcxproj -> C:\Users\eduar\source\repos\ProjetoPOO\Debug\ProjetoPOO.exe
+﻿  Main.cpp
+  SGestao.cpp
+  Gerando Código...
+LINK : fatal error LNK1168: não foi possível abrir C:\Users\gca9\Documents\Faculdade\POO\ProjetoPOO\Debug\ProjetoPOO.exe para escrita

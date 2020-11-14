@@ -1,5 +1,12 @@
+#pragma once
 class Ponto
 {
-	int x, y;
+	friend class SGestao;
+	friend class Pessoa;
+	//-----Variaveis-----
+	int X, Y;
+	//-----Funções-----
+	Ponto(int x, int y);
+	virtual ~Ponto();
 };
 
