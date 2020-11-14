@@ -1,21 +1,25 @@
 #pragma once
 #include "Virus.h"
+#include "Ponto.h"
 
 class Pessoa
 {
 	private:
+		//-----Atributos-----
+		list<Virus*> ListaVirus;
 		friend class SGestao;
-		//-----Variaveis-----
 		string Nome;
 		char* BI;
 		string Cidade;
 		unsigned short int Idade;
-		unsigned short int Coordenada_X, Coordenada_Y;
-		Virus* Virus_Infectado;
-		//-----Funcoes-----
-		Pessoa(string nome, char* bi, string cidade, unsigned short int idade, unsigned short int coordenada_x, unsigned short int coordenada_y, Virus* virus_infectado);
+		Ponto* Coordenada_Atual; 
+
+		//-----Métodos-----
+		Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado);
 		virtual ~Pessoa();
-		void Mostrar_Pessoa();
+		void Mostrar();
+		bool Run();
+		void Deslocar();
 	public:
 
 };

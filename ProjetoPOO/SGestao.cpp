@@ -19,16 +19,18 @@ SGestao::SGestao()
     Virus* A3 = new Virus("hs-66", 28, 30, 50, B);
     Lista_Virus.push_back(A3);
 
-    char* BI = (char*)malloc(9 * sizeof(char)); 
+    char* BI = (char*)malloc(9 * sizeof(char));
     strcpy(BI,"12345678");
 
-    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30, 22, 55, A1);
+    Ponto* P = new Ponto(10,20);
+
+    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30, P, NULL);
     Lista_Pessoas.push_back(C1);
 
-    Pessoa* C2 = new Pessoa("Rafael", BI, "Viseu", 24, 6, 87, A2);
+    Pessoa* C2 = new Pessoa("Rafael", BI, "Viseu", 24, P, A2);
     Lista_Pessoas.push_back(C2);
 
-    Pessoa* C3 = new Pessoa("Ricardo", BI, "Porto", 55, 8, 66, A3);
+    Pessoa* C3 = new Pessoa("Ricardo", BI, "Porto", 55, P, A3);
     Lista_Pessoas.push_back(C3);
 }
 
@@ -38,28 +40,49 @@ SGestao::~SGestao()
 
 }
 
-bool SGestao::Load(const string &N_Ficheiro) 
+bool SGestao::Load(const string &N_Ficheiro)
 {
     // 1. Carregar os dados de ficheiros, este método é fundamental!
-
+    // ESSA FUNÇÃO ESTÁ ERRADA, mas vou consertar
     ifstream Ficheiro;
     Ficheiro.open(N_Ficheiro, ios::in);
-    string AUX;
-    char Delimitador =';';
+
+    string Linha_Ficheiro, Variavel;
+    char Delimitador = '\t';
+
+    string Lista_Variaveis[4];
+    int Pos;
+    Pessoa* AUX_Pessoa;
 
     if(Ficheiro.is_open())
     {
-        while (getline(Ficheiro, AUX, Delimitador)) 
+
+        while (getline(Ficheiro, Linha_Ficheiro))
         {
-            //Terminar Quando tiver o ficheiro de dados
+            istringstream AUX_Linha_Ficheiro(Linha_Ficheiro);
+            Pos = 0;
+            while (getline(AUX_Linha_Ficheiro, Variavel,Delimitador))
+            {
+                Lista_Variaveis[Pos] = Variavel;
+                ++Pos;
+            }
+            cout << Lista_Variaveis[0] << "\n" << Lista_Variaveis[1] << "\n" << Lista_Variaveis[2] << "\n" << Lista_Variaveis[3] << "\n\n";
+           // string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado
+            Ponto* P = new Ponto(10, 20);
+            char* BI = (char*)malloc(9 * sizeof(char));
+            strcpy(BI, "12345678");
+            AUX_Pessoa = new Pessoa(Lista_Variaveis[1], BI, Lista_Variaveis[2],10,P,NULL);
+            Lista_Pessoas.push_back(AUX_Pessoa);
+
         }
+
         return true;
     }
     else
     {
         MSG("\nErro ao abrir o ficheiro\n");
     }
- 
+
     return false;
 }
 
@@ -68,7 +91,7 @@ void SGestao::Mostrar_L_Virus()
     list<Virus *>::iterator it = Lista_Virus.begin();
     while(it != Lista_Virus.end())
     {
-      
+
         (*it)->Mostrar_Virus();
         ++it;
     }
@@ -87,42 +110,42 @@ void SGestao::Mostrar_L_Pessoas()
 
 int SGestao::Contar(Virus* X)
 {
-    // 2. Contar o número de vírus de um dado Tipo; 
+    // 2. Contar o número de vírus de um dado Tipo;
     return 0;
 }
 
 Pessoa* SGestao::PessoaMaisContagios()
 {
-    // 3. Determinar a pessoa que mais contágios provocou. 
+    // 3. Determinar a pessoa que mais contágios provocou.
     return NULL;
 }
 
 bool SGestao::PessoaFonteContagio(const string& BI)
 {
-    // 4. Verificar se uma dada pessoa esteve na base de algum contágio; 
+    // 4. Verificar se uma dada pessoa esteve na base de algum contágio;
     return true;
 }
 
 int SGestao::Memoria()
 {
-    // 5. Determinar toda a memória ocupada; 
+    // 5. Determinar toda a memória ocupada;
     return 0;
 }
 
 void SGestao::PessoasContagiadas(list<Pessoa*>& L)
 {
-    // 6. Determinar as pessoas que estão contagiadas. 
+    // 6. Determinar as pessoas que estão contagiadas.
 }
 
 Virus* SGestao::VirusMaisActivo()
 {
-    // 7. Determinar qual o tipo de vírus que está mais activo; 
+    // 7. Determinar qual o tipo de vírus que está mais activo;
     return NULL;
 }
 
 void SGestao::PessoasMaisUmVirus(list<Pessoa*>& L)
 {
-    //  8. Determinar as pessoas que podem ter mais do que um vírus; 
+    //  8. Determinar as pessoas que podem ter mais do que um vírus;
 }
 
 void SGestao::RemoverVirus(Virus* X)
@@ -132,13 +155,13 @@ void SGestao::RemoverVirus(Virus* X)
 
 void SGestao::EscreverXML(const string& fich_xml)
 {
-    // 10. Gravar para ficheiro em formato XML um dado modelo; 
+    // 10. Gravar para ficheiro em formato XML um dado modelo;
 
 }
 
 string SGestao::CidadeMaisCasos()
 {
-    // 12. Determinar a cidade que está a ser mais afetada; 
+    // 12. Determinar a cidade que está a ser mais afetada;
     return NULL;
 }
 
@@ -158,7 +181,7 @@ int SGestao::EscalaoIdadeMaisAfectado()
 
 list<Ponto*>* SGestao::PossivelIr_A_B(Ponto& A, Ponto& B)
 {
-    //Será que é possível ir de um ponto A a um ponto B sem passar por posições onde 
+    //Será que é possível ir de um ponto A a um ponto B sem passar por posições onde
     // estão pessoas infetadas ? Se for possível, deve devolver a lista das posições por onde se pode passar;
     return NULL;
 }
