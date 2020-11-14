@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Covid.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Pessoa.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="Virus.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Covid.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Ponto.h" />
