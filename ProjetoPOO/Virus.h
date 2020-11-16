@@ -1,4 +1,6 @@
-#pragma once
+#ifndef VIRUS__H
+#define VIRUS__H
+
 using namespace std;
 //-----Includes-----
 #include <string>
@@ -38,3 +40,4 @@ class Virus
 		virtual ~Virus();
 };
 
+#endif // !VIRUS__H

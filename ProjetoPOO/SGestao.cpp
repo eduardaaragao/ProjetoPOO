@@ -11,7 +11,7 @@ SGestao::SGestao()
     B.Mes = 05;
     B.Ano = 2020;
 
-    Virus *A1 = new Virus("Vid-56", 10, 20, 30, B);
+    Virus *A1 = new Virus("Vid-56", 10, 20, 30,B);
 
     Lista_Virus.push_back(A1);
     Virus* A2 = new Virus("co-63", 65, 20, 57, B);
@@ -24,14 +24,14 @@ SGestao::SGestao()
 
     Ponto* P = new Ponto(10,20);
 
-    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30, P, NULL);
+    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30);
     Lista_Pessoas.push_back(C1);
 
-    Pessoa* C2 = new Pessoa("Rafael", BI, "Viseu", 24, P, A2);
+    Pessoa* C2 = new Pessoa("Rafael", BI, "Viseu", 24);
     Lista_Pessoas.push_back(C2);
 
-    Pessoa* C3 = new Pessoa("Ricardo", BI, "Porto", 55, P, A3);
-    Lista_Pessoas.push_back(C3);
+    Pessoa* C3 = new Pessoa("Ricardo", BI, "Porto", 55);
+    Lista_Pessoas.push_back(C3); 
 }
 
 SGestao::~SGestao()
@@ -71,7 +71,7 @@ bool SGestao::Load(const string &N_Ficheiro)
             Ponto* P = new Ponto(10, 20);
             char* BI = (char*)malloc(9 * sizeof(char));
             strcpy(BI, "12345678");
-            AUX_Pessoa = new Pessoa(Lista_Variaveis[1], BI, Lista_Variaveis[2],10,P,NULL);
+            AUX_Pessoa = new Pessoa(Lista_Variaveis[1], BI, Lista_Variaveis[2],10);
             Lista_Pessoas.push_back(AUX_Pessoa);
 
         }
@@ -103,7 +103,7 @@ void SGestao::Mostrar_L_Pessoas()
     while (it != Lista_Pessoas.end())
     {
 
-        (*it)->Mostrar_Pessoa();
+        (*it)->Mostrar();
         ++it;
     }
 }

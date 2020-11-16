@@ -6,7 +6,7 @@ extern void Menu();
 int main()
 {
 	SGestao A;
-	A.Load("Ficheiro_Pessoa.txt");
+	//A.Load("Ficheiro_Pessoa.txt");
 	A.Mostrar_L_Pessoas();
 	return 0;
 }

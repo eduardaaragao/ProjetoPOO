@@ -1,6 +1,9 @@
-#pragma once
+#ifndef PESSOA__H
+#define PESSOA__H
+
 #include "Virus.h"
 #include "Ponto.h"
+#include<list>
 
 class Pessoa
 {
@@ -15,7 +18,8 @@ class Pessoa
 		Ponto* Coordenada_Atual; 
 
 		//-----Métodos-----
-		Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado);
+		Pessoa(string nome, char* bi, string cidade, unsigned short int idade); // se pessoa acabou de ser criada
+		void DadosPessoa(string nome, char* bi, string cidade, unsigned short int idade, int x, int y, list<Virus*>virus);
 		virtual ~Pessoa();
 		void Mostrar();
 		bool Run();
@@ -24,3 +28,4 @@ class Pessoa
 
 };
 
+#endif // !PESSOA__H
