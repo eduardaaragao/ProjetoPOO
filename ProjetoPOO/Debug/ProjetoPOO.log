@@ -1,28 +1,2 @@
-<<<<<<< HEAD
-﻿  Covid.cpp
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,8): error C2065: 'Virus': undeclared identifier
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,14): error C2059: syntax error: '>'
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(20,122): error C2061: syntax error: identifier 'Virus'
-  Main.cpp
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,8): error C2065: 'Virus': undeclared identifier
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,14): error C2059: syntax error: '>'
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(20,122): error C2061: syntax error: identifier 'Virus'
-  SGestao.cpp
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,8): error C2065: 'Virus': undeclared identifier
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,14): error C2059: syntax error: '>'
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(20,122): error C2061: syntax error: identifier 'Virus'
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\SGestao.cpp(29,59): error C2661: 'Pessoa::Pessoa': no overloaded function takes 6 arguments
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\SGestao.cpp(90,90): error C2661: 'Pessoa::Pessoa': no overloaded function takes 6 arguments
-  Uteis.cpp
-  Virus.cpp
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,8): error C2065: 'Virus': undeclared identifier
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(11,14): error C2059: syntax error: '>'
-C:\Users\eduar\source\repos\ProjetoPOO\ProjetoPOO\Pessoa.h(20,122): error C2061: syntax error: identifier 'Virus'
-  Generating Code...
-=======
-﻿  Main.cpp
-C:\Users\gca9\Documents\Faculdade\POO\ProjetoPOO\ProjetoPOO\Main.cpp(9,12): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-  SGestao.cpp
-  Gerando Código...
+﻿  SGestao.cpp
   ProjetoPOO.vcxproj -> C:\Users\gca9\Documents\Faculdade\POO\ProjetoPOO\Debug\ProjetoPOO.exe
->>>>>>> d77f84f31da277bba72a1e314de5106151b68de0

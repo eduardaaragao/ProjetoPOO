@@ -7,13 +7,8 @@
 Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual)
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
-<<<<<<< HEAD
-	Nome = nome; 
-	BI = bi;
-=======
 	Nome = nome;	
 	strcpy(BI,bi);
->>>>>>> d77f84f31da277bba72a1e314de5106151b68de0
 	Cidade = cidade;
 	Idade = idade;
 	Coordenada_Atual = coordenada_atual;

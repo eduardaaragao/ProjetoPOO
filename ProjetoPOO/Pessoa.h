@@ -3,26 +3,16 @@
 
 #include "Virus.h"
 #include "Ponto.h"
-<<<<<<< HEAD
 #include <list>
-=======
 #include<list>
->>>>>>> d77f84f31da277bba72a1e314de5106151b68de0
+
 
 class Pessoa
 {
 	private:
 		//-----Atributos-----
 		string Nome;
-<<<<<<< HEAD
-		char *BI;
-		string Cidade;
-		unsigned short int Idade;
-		Ponto* Coordenada_Atual;
-
-		//-----Métodos-----
 		Pessoa(string nome, char* BI, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado);
-=======
 		char BI[10];
 		string Cidade;
 		unsigned short int Idade;
@@ -33,7 +23,6 @@ class Pessoa
 		//-----Construtores e Destrutores-----
 
 		Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual);
->>>>>>> d77f84f31da277bba72a1e314de5106151b68de0
 		virtual ~Pessoa();
 
 		//----- Métodos -----

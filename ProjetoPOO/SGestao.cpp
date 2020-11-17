@@ -5,67 +5,33 @@
 SGestao::SGestao()
 {
     //Inicia as lista, somente para teste, apagar depois
-<<<<<<< HEAD
-    Data B;
-    B.Dia = 20;
-    B.Mes = 05;
-    B.Ano = 2020;
+    Data* a;
+    Virus* virus;
+    a = new Data(10, 04, 2019);
+    virus = new Covid("Covid", 10, 62, 33, a);
+    Lista_Virus.push_back(virus);
 
+    a = new Data(20, 02, 1998);
+    virus = new Virus("Ebola",33,52,65,a);
+    Lista_Virus.push_back(virus);
 
-    Virus* V = new Virus("Covid", 10, 20, 30, B);
-
-    Lista_Virus.push_back(V);
-
-    V = new Virus("Ebola", 10, 20, 30, B);
-
-    Lista_Virus.push_back(V);
-
-    Ponto* P = new Ponto(10, 20);
-
-    char* BI = (char*)malloc(10* sizeof(char));
-
-    strcpy(BI, "12345678");
-
-    Pessoa* PE = new Pessoa("Joao", BI, "Viseu", 30, P, V);
-
-    Lista_Pessoas.push_back(PE);
-
-
-   /* Virus *A1 = new Virus("Vid-56", 10, 20, 30, B);
-
-    Lista_Virus.push_back(A1);
-    Virus* A2 = new Virus("co-63", 65, 20, 57, B);
-    Lista_Virus.push_back(A2);
-    Virus* A3 = new Virus("hs-66", 28, 30, 50, B);
-    Lista_Virus.push_back(A3);
-
-    char* BI = (char*)malloc(9 * sizeof(char));
-    strcpy(BI,"12345678");
-
-    Ponto* P = new Ponto(10,20);
-
-    Pessoa *C1 = new Pessoa("Carlos", BI, "Mangualde", 30, P, NULL);
-    Lista_Pessoas.push_back(C1);*/
-
-
-=======
-  
->>>>>>> d77f84f31da277bba72a1e314de5106151b68de0
+    a = new Data(05, 8, 1989);
+    virus = new Virus("Paludismo", 63, 12, 8, a);
+    Lista_Virus.push_back(virus);
 }
 
 SGestao::~SGestao()
 {
     // Implemente o destrutor da classe SGestao, que obviamente deve libertar toda a memória ocupada.
-   // Gravar_Pessoas("Ficheiro_Pessoa.txt","Ficheiro_PessoaV.txt");
+   Gravar_Pessoas("Ficheiro_Pessoa.txt");
 }
 
 bool SGestao::Load(const string &N_Ficheiro)
 {
     // 1. Carregar os dados de ficheiros, este método é fundamental!
 
-    ifstream Ficheiro_1, Ficheiro_2;
+    ifstream Ficheiro_1;
     Ficheiro_1.open(N_Ficheiro, ios::in);
-    //Ficheiro_2.open("Ficheiro_PessoaV.txt",ios::in);
 
     if(Ficheiro_1.is_open())
     {
@@ -80,7 +46,7 @@ bool SGestao::Load(const string &N_Ficheiro)
         while (getline(Ficheiro_1, Linha_Ficheiro))//Pega a linha do ficheiro
         {
 
-            string Vetor_Variaveis[6];
+            string Vetor_Variaveis[50];
             istringstream AUX_Linha_Ficheiro(Linha_Ficheiro);
             Pos = 0;
 
@@ -109,12 +75,25 @@ bool SGestao::Load(const string &N_Ficheiro)
             // Cria a pessoa
             AUX_Pessoa = new Pessoa(Vetor_Variaveis[1], BI, Vetor_Variaveis[2], atoi(Vetor_Variaveis[3].c_str()),P);
             
-            //Coloca os viros nas pessoas
-            /*while(getline(Ficheiro_2, Linha_Ficheiro_2))
+            if (Pos > 6) 
             {
-                cout << Linha_Ficheiro_2<<"\n";
-            }*/
-         
+                for (int x = 6; x < Pos;x++) 
+                {
+                    list<Virus*> :: iterator it = Lista_Virus.begin();
+                    while (it != Lista_Virus.end()) 
+                    {
+                        
+                        if (_stricmp(Vetor_Variaveis[x].c_str(),(*it)->Get_Nome_Virus().c_str()) == 0)
+                        {
+                            AUX_Pessoa->Get_Virus_Contraidos()->push_back(*it);
+                            (*it)->Get_LP().push_back(AUX_Pessoa);
+                        }
+                        ++it;
+                    }
+
+                }
+            }
+
             Lista_Pessoas.push_back(AUX_Pessoa);
             Vetor_Variaveis->clear();
         }
@@ -130,31 +109,6 @@ bool SGestao::Load(const string &N_Ficheiro)
     return false;
 }
 
-<<<<<<< HEAD
-void SGestao::Mostrar_L_Virus()
-{
-    list<Virus *>::iterator it = Lista_Virus.begin();
-    while(it != Lista_Virus.end())
-    {
-
-        (*it)->Mostrar_Virus();
-        ++it;
-    }
-}
-
-void SGestao::Mostrar_L_Pessoas()
-{
-    list<Pessoa *>::iterator it = Lista_Pessoas.begin();
-    while (it != Lista_Pessoas.end())
-    {
-
-        (*it)->Mostrar();
-        ++it;
-    }
-}
-
-=======
->>>>>>> d77f84f31da277bba72a1e314de5106151b68de0
 int SGestao::Contar(Virus* X)
 {
     // 2. Contar o número de vírus de um dado Tipo;
@@ -264,13 +218,11 @@ void SGestao::Mostrar_L_Pessoas()
     }
 }
 
-bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1, const string& N_Ficheiro_2)
+bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1)
 {
-    ofstream Ficheiro_1, Ficheiro_2;
+    ofstream Ficheiro_1;
 
     Ficheiro_1.open(N_Ficheiro_1, ios::out);
-
-    Ficheiro_2.open(N_Ficheiro_2, ios::out);
 
     if (Ficheiro_1.is_open())
     {
@@ -282,27 +234,25 @@ bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1, const string& N_Ficheir
         while (it1 != Lista_Pessoas.end())
         {
 
-          Ficheiro_1 << (*it1)->Get_BI() << "\t" << (*it1)->Get_Nome() << "\t" << (*it1)->Get_Cidade() << "\t" << (*it1)->Get_Idade() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_X() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_Y() <<endl;
+          Ficheiro_1 << (*it1)->Get_BI() << "\t" << (*it1)->Get_Nome() << "\t" << (*it1)->Get_Cidade() << "\t" << (*it1)->Get_Idade() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_X() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_Y();
             
           if(!(*it1)->Get_Virus_Contraidos()->empty())
           {
 
               Lv = (*it1)->Get_Virus_Contraidos();
               it2 = Lv->begin();
-              Ficheiro_2 << (*it1)->Get_BI() << endl;
+
                while (it2 != Lv->end()) 
               {
-                  Ficheiro_2 << (*it2)->Get_Nome_Virus() << endl;
+                  Ficheiro_1 << "\t" <<(*it2)->Get_Nome_Virus();
                   ++it2;
-  
               }
           }
-         
+          Ficheiro_1 << "\n";
           ++it1;
         }
 
         Ficheiro_1.close();
-        Ficheiro_2.close();
         return true;
     }
     else
@@ -311,7 +261,6 @@ bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1, const string& N_Ficheir
     }
 
     Ficheiro_1.close();
-    Ficheiro_2.close();
     return false;
 }
 
