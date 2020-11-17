@@ -1,17 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Pessoa.h"
+#include"time.h"
+#include"Ponto.h"
 
-Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado)
+// Inicializaçaõ de uma pessoa e geraçao de uma primeira coordenada
+Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual)
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
+<<<<<<< HEAD
 	Nome = nome; 
 	BI = bi;
+=======
+	Nome = nome;	
+	strcpy(BI,bi);
+>>>>>>> d77f84f31da277bba72a1e314de5106151b68de0
 	Cidade = cidade;
 	Idade = idade;
 	Coordenada_Atual = coordenada_atual;
-	if (virus_infectado != NULL) 
-	{
-		ListaVirus.push_back(virus_infectado);
-	}
 }
 
 Pessoa::~Pessoa()
@@ -22,12 +27,12 @@ Pessoa::~Pessoa()
 void Pessoa::Mostrar()
 {
 
-	cout << "\nNome: [" << Nome << "]\nBI: [" << BI << "]\nCidade: [" << Cidade << "]\nIdade: [" << Idade << "]\nCoordenada X: [" << Coordenada_Atual->X << "]\nCoordenada Y: [" << Coordenada_Atual->Y << "]" <<endl;
-	list<Virus*>:: iterator it = ListaVirus.begin();
+	cout << "\nNome: [" << Nome << "]\nBI: [" << BI << "]\nCidade: [" << Cidade << "]\nIdade: [" << Idade << "]\nCoordenada X: [" << Coordenada_Atual->Get_X() << "]\nCoordenada Y: [" << Coordenada_Atual->Get_Y() << "]" <<endl;
+	list<Virus*>:: iterator it = Virus_Contraidos.begin();
 	cout << "Lista de Virus:" << endl;
-	while (it!= ListaVirus.end())
+	while (it!= Virus_Contraidos.end())
 	{
-		cout << "[" << (*it)->Get_Nome() << "]" << endl;
+		cout << "[" << (*it)->Get_Nome_Virus() << "]" << endl;
 		++it;
 	}
 }
@@ -41,6 +46,8 @@ bool Pessoa::Run()
 
 void Pessoa::Deslocar()
 {
-	Coordenada_Atual->X += 1;
-	Coordenada_Atual->Y += 1;
+	/*Coordenada tem de ser + ou - 1 e tem de add condição para não ultrapassar os limites*/
+	
+	//Coordenada_Atual->X += 1;
+	//Coordenada_Atual->Y += 1;
 }
