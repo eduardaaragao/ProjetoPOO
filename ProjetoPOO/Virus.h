@@ -28,7 +28,6 @@ class Virus
 		Data Data_Inicio;
 
 		//----- Métodos -----
-
 		void Mostrar_Virus();
 		string Get_Nome() { return Nome_Virus; }
 		void AfectarPessoa(Pessoa* P) { LP.push_back(P); } // Um vírus

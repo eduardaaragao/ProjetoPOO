@@ -3,7 +3,7 @@
 Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado)
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
-	Nome = nome;	
+	Nome = nome; 
 	BI = bi;
 	Cidade = cidade;
 	Idade = idade;

@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1604829403 source:c:\users\eduar\source\repos\projetopoo\projetopoo\menu.cpp
+	<iostream>
+
+1605357551 source:c:\users\eduar\source\repos\projetopoo\projetopoo\pessoa.cpp
+	"Pessoa.h"
+
+1605631507 c:\users\eduar\source\repos\projetopoo\projetopoo\pessoa.h
+	"Virus.h"
+	"Ponto.h"
+	<list>
+
+1605352423 c:\users\eduar\source\repos\projetopoo\projetopoo\virus.h
+	<string>
+	<iostream>
+	<time.h>
+	"Data.h"
+	<list>
+	<fstream>
+	"Pessoa.h"
+
+1604825612 c:\users\eduar\source\repos\projetopoo\projetopoo\data.h
+
+1605346987 c:\users\eduar\source\repos\projetopoo\projetopoo\ponto.h
+
+1605346987 source:c:\users\eduar\source\repos\projetopoo\projetopoo\ponto.cpp
+	"Ponto.h"
+
+1604828945 source:c:\users\eduar\source\repos\projetopoo\projetopoo\uteis.cpp
+	<iostream>
+

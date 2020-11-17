@@ -4,6 +4,7 @@
 #include "Ponto.h"
 #include <vector>
 #include <sstream>
+#include <list>
 
 class SGestao
 {
