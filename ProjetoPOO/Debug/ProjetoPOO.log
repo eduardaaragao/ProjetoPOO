@@ -1,22 +1,5 @@
-﻿  Covid.cpp
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,8): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,14): error C2059: syntax error: '>'
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,103): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,109): error C2059: syntax error: '>'
-  Main.cpp
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,8): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,14): error C2059: syntax error: '>'
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,103): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,109): error C2059: syntax error: '>'
+﻿  Main.cpp
+C:\Users\gca9\Documents\Faculdade\POO\ProjetoPOO\ProjetoPOO\Main.cpp(9,12): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
   SGestao.cpp
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,8): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,14): error C2059: syntax error: '>'
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,103): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,109): error C2059: syntax error: '>'
-  Uteis.cpp
-  Virus.cpp
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,8): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(12,14): error C2059: syntax error: '>'
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,103): error C2065: 'Virus': undeclared identifier
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Pessoa.h(22,109): error C2059: syntax error: '>'
-  Generating Code...
+  Gerando Código...
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Documents\Faculdade\POO\ProjetoPOO\Debug\ProjetoPOO.exe

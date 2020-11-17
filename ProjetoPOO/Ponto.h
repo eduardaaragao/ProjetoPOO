@@ -1,12 +1,29 @@
 #pragma once
+using namespace std;
+#include <time.h> 
+#include <iostream>
+#include <stdlib.h>
+
+
 class Ponto
 {
-	friend class SGestao;
-	friend class Pessoa;
-	//-----Variaveis-----
-	int X, Y;
-	//-----Funções-----
-	Ponto(int x, int y);
-	virtual ~Ponto();
+	private:
+
+		//----- Variaveis -----
+		
+		int X, Y;
+	
+	public:
+		//Construtores e destrutores são públicos
+
+		Ponto(int x = rand() % 1000, int y = rand() % 1000);
+		virtual ~Ponto();
+		//----- Métodos -----
+		
+		
+		//----- Gets -----
+
+		int Get_X() { return X; }
+		int Get_Y() { return Y; }
 };
 
