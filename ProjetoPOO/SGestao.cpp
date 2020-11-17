@@ -46,7 +46,7 @@ bool SGestao::Load(const string &N_Ficheiro)
         while (getline(Ficheiro_1, Linha_Ficheiro))//Pega a linha do ficheiro
         {
 
-            string Vetor_Variaveis[50];
+            string Vetor_Variaveis[25];
             istringstream AUX_Linha_Ficheiro(Linha_Ficheiro);
             Pos = 0;
 
