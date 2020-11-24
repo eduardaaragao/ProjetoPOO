@@ -150,6 +150,7 @@
     <ClCompile Include="Virus.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cidade.h" />
     <ClInclude Include="Covid.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Pessoa.h" />

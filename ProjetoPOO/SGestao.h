@@ -9,16 +9,19 @@ using namespace std;
 #include "Virus.h"
 #include "Covid.h"
 #include "Ponto.h"
+#include "Cidade.h"
+#include <map>
 
 
 class SGestao
 {
 	private:
-		//----- Atributos -----
-		list<Pessoa *> Lista_Pessoas; // Lista de pessoas do sistema
+		//----- Atributos -----//
+		list<Pessoa*> Lista_Pessoas; // Lista de pessoas do sistema
 		list<Virus *> Lista_Virus; // Lista de vírus cadastrados
 		list<Pessoa*> L_Infetados; // Lista de pessoas infetadas
 		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
+		list<Cidade*> CIDADES;
 	
 	public:
 		//Construtores e destrutores são públicos
@@ -50,6 +53,7 @@ class SGestao
 		void Mostrar_L_Virus();
 		void Mostrar_L_Pessoas();
 		void Infectar_Pessoa(Pessoa* pessoa, Virus* virus);
+		void Mostrar_Casos_Cidades();
 	
 };
 

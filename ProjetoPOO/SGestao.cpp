@@ -163,7 +163,20 @@ void SGestao::EscreverXML(const string& fich_xml)
 string SGestao::CidadeMaisCasos()
 {
     // 12. Determinar a cidade que está a ser mais afetada;
-    return NULL;
+   
+    string CID_CASOS;
+    int MAX_CASOS = 0;
+    list<Cidade*> ::iterator i;
+
+    for (i = CIDADES.begin(); i != CIDADES.end(); i++)
+    {
+        if ((*i)->getCont() > MAX_CASOS)
+        {
+            CID_CASOS = (*i)->getCidade();
+        }
+    }
+
+    return CID_CASOS;
 }
 
 bool SGestao::AlertasAsPessoasProximas(int N, double R)
@@ -175,8 +188,26 @@ bool SGestao::AlertasAsPessoasProximas(int N, double R)
 
 int SGestao::EscalaoIdadeMaisAfectado()
 {
-    //14. Determinar qual o escalão de idades mais afetada; (Considera Escala 0-[0,9]; 1-
-    //[10, 19] ; 2 - [20, 29]; etc
+    map<int, int> Escalao;
+    int i,escalao,idade;
+    list<Pessoa*> ::iterator it;
+    map<int, int> :: iterator it2;
+
+    for (i = 0; i < 10; i++)
+    {
+        Escalao.emplace(i, 0);
+    }
+
+    for (it = L_Infetados.begin(); it != L_Infetados.end();it++)
+    {
+        int idade = (*it)->Get_Idade();
+        escalao = (*it)->escalaoIdade(idade);
+
+        it2 = Escalao.find(escalao);
+        it2->second += 1;
+
+    }
+
     return 0;
 }
 
@@ -268,4 +299,17 @@ void SGestao::Infectar_Pessoa(Pessoa* pessoa,Virus* virus)
 {
     pessoa->Get_Virus_Contraidos()->push_back(virus);
     virus->Get_LP().push_back(pessoa);
+}
+
+void SGestao::Mostrar_Casos_Cidades()
+{
+    // Lista as cidades e seus respectivos números de casos
+
+    list<Cidade*> ::iterator it;
+
+    for (it = CIDADES.begin();it != CIDADES.end(); it++)
+    {
+        cout << "Cidade: " << (*it)->getCidade() << " [ " << (*it)->getCont() << "]" << endl;
+    }
+
 }

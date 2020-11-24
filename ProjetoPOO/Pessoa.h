@@ -39,6 +39,9 @@ class Pessoa
 		int Get_Idade() { return Idade; }
 		Ponto* Get_Coordenada_Atual() { return Coordenada_Atual; }
 		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }
+
+		//-----Auxiliares-------
+		int escalaoIdade(int idade);
 		
 
 };
