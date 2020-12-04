@@ -4,7 +4,7 @@
 
 SGestao::SGestao()
 {
-    //Inicia as lista, somente para teste, apagar depois
+    //Inicia as listas, somente para teste, apagar depois
     Data* a;
     Virus* virus;
     a = new Data(10, 04, 2019);
@@ -51,38 +51,38 @@ bool SGestao::Load(const string &N_Ficheiro)
             Pos = 0;
 
             //Separa a linha do ficheiro
-            while (getline(AUX_Linha_Ficheiro, Variavel,Delimitador)) 
+            while (getline(AUX_Linha_Ficheiro, Variavel,Delimitador))
             {
 
                 Vetor_Variaveis[Pos] = Variavel;
                 Pos++;
 
             }
-            
-            //Cria o ponto 
-            if (Vetor_Variaveis[4].empty() || Vetor_Variaveis[5].empty()) 
+
+            //Cria o ponto
+            if (Vetor_Variaveis[4].empty() || Vetor_Variaveis[5].empty())
             {
                P = new Ponto();
             }
-            else 
+            else
             {
               P = new Ponto(atoi(Vetor_Variaveis[4].c_str()), atoi(Vetor_Variaveis[5].c_str()));
             }
 
             //Cria o BI
             strcpy(BI, Vetor_Variaveis[0].c_str());
-           
+
             // Cria a pessoa
             AUX_Pessoa = new Pessoa(Vetor_Variaveis[1], BI, Vetor_Variaveis[2], atoi(Vetor_Variaveis[3].c_str()),P);
-            
-            if (Pos > 6) 
+
+            if (Pos > 6)
             {
-                for (int x = 6; x < Pos;x++) 
+                for (int x = 6; x < Pos;x++)
                 {
                     list<Virus*> :: iterator it = Lista_Virus.begin();
-                    while (it != Lista_Virus.end()) 
+                    while (it != Lista_Virus.end())
                     {
-                        
+
                         if (_stricmp(Vetor_Variaveis[x].c_str(),(*it)->Get_Nome_Virus().c_str()) == 0)
                         {
                             AUX_Pessoa->Get_Virus_Contraidos()->push_back(*it);
@@ -163,7 +163,7 @@ void SGestao::EscreverXML(const string& fich_xml)
 string SGestao::CidadeMaisCasos()
 {
     // 12. Determinar a cidade que está a ser mais afetada;
-   
+
     string CID_CASOS;
     int MAX_CASOS = 0;
     list<Cidade*> ::iterator i;
@@ -205,9 +205,7 @@ int SGestao::EscalaoIdadeMaisAfectado()
 
         it2 = Escalao.find(escalao);
         it2->second += 1;
-
     }
-
     return 0;
 }
 
@@ -266,14 +264,14 @@ bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1)
         {
 
           Ficheiro_1 << (*it1)->Get_BI() << "\t" << (*it1)->Get_Nome() << "\t" << (*it1)->Get_Cidade() << "\t" << (*it1)->Get_Idade() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_X() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_Y();
-            
+
           if(!(*it1)->Get_Virus_Contraidos()->empty())
           {
 
               Lv = (*it1)->Get_Virus_Contraidos();
               it2 = Lv->begin();
 
-               while (it2 != Lv->end()) 
+               while (it2 != Lv->end())
               {
                   Ficheiro_1 << "\t" <<(*it2)->Get_Nome_Virus();
                   ++it2;
@@ -312,4 +310,17 @@ void SGestao::Mostrar_Casos_Cidades()
         cout << "Cidade: " << (*it)->getCidade() << " [ " << (*it)->getCont() << "]" << endl;
     }
 
+}
+
+
+bool SGestao::Run()
+{
+    while (true)
+    {
+        for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
+        {
+            (*IT)->Run();
+        }
+        system("pause");
+    }
 }

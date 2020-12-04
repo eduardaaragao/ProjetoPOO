@@ -21,7 +21,7 @@ class Ponto
 		//----- Métodos -----
 		
 		
-		//----- Gets -----
+		//----- Getters -----
 
 		int Get_X() { return X; }
 		int Get_Y() { return Y; }

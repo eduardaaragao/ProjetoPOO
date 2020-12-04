@@ -13,8 +13,6 @@ public:
 	string getCidade() { return nome; }
 	Cidade(string _nome);
 	~Cidade();
-
-
 };
 
 Cidade::Cidade(string _nome)

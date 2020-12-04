@@ -1,11 +1,10 @@
 #ifndef PESSOA__H
 #define PESSOA__H
 
-#include "Virus.h"
 #include "Ponto.h"
 #include <list>
-#include<list>
 
+class Virus;
 
 class Pessoa
 {
@@ -42,8 +41,6 @@ class Pessoa
 
 		//-----Auxiliares-------
 		int escalaoIdade(int idade);
-		
-
 };
 
 #endif // !PESSOA__H

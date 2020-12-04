@@ -35,7 +35,8 @@ class Virus
 		//----- Métodos -----
 		void Mostrar_Virus();
 		void Infectar_Pessoa(Pessoa* pessoa);
-		//void AfectarPessoa(Pessoa* P) { LP.push_back(P); } // Um vírus
+		//void AfectarPessoa(Pessoa* P) { LP.push_back(P); } // Um vírus 
+		// ???????????????
 
 		//----- Gets -----
 		string Get_Nome_Virus() { return Nome_Virus; }

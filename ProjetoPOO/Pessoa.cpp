@@ -1,14 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Pessoa.h"
-#include"time.h"
-#include"Ponto.h"
+#include "time.h"
+#include "Ponto.h"
+#include "Virus.h"
 
-// Inicializaçaõ de uma pessoa e geraçao de uma primeira coordenada
+// Inicialização de uma pessoa e geraçao de uma primeira coordenada
 Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual)
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
-	Nome = nome;	
-	strcpy(BI,bi);
+	Nome = nome;
+	strcpy(BI, bi);
 	Cidade = cidade;
 	Idade = idade;
 	Coordenada_Atual = coordenada_atual;
@@ -42,12 +43,12 @@ bool Pessoa::Run()
 void Pessoa::Deslocar()
 {
 	/*Coordenada tem de ser + ou - 1 e tem de add condição para não ultrapassar os limites*/
-	
+
 	//Coordenada_Atual->X += 1;
 	//Coordenada_Atual->Y += 1;
 }
 
-int escalaoIdade(int Idade)
+int Pessoa::escalaoIdade(int Idade)
 {
 	if (Idade < 10)
 		return 0;

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "SGestao.h"
-#include "Virus.h"
+
 
 
 extern void Menu();
@@ -8,10 +8,9 @@ int main()
 {
 	srand(time(NULL));// Não retirar
 
-	SGestao A;
-	A.Load("Ficheiro_Pessoa.txt");
-	A.Mostrar_L_Pessoas();
-	//A.Mostrar_L_Virus();
+	SGestao SG;
+	SG.Load("Ficheiro_Teste.txt");
+	SG.Run();
 	return 0;
 }
 

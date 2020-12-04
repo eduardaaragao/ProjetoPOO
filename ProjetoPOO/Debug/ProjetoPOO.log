@@ -1,2 +1,3 @@
-﻿  SGestao.cpp
-  ProjetoPOO.vcxproj -> C:\Users\gca9\Documents\Faculdade\POO\ProjetoPOO\Debug\ProjetoPOO.exe
+﻿SGestao.obj : error LNK2005: "public: __thiscall Cidade::Cidade(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Cidade@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) já definida no Main.obj
+SGestao.obj : error LNK2005: "public: __thiscall Cidade::~Cidade(void)" (??1Cidade@@QAE@XZ) já definida no Main.obj
+C:\Users\eduar\ProjetoPOO\Debug\ProjetoPOO.exe : fatal error LNK1169: encontrados um ou mais símbolos múltiplos definidos

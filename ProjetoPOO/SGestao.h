@@ -23,7 +23,7 @@ class SGestao
 		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
 		list<Cidade*> CIDADES;
 	
-	public:
+	public:	
 		//Construtores e destrutores são públicos
 
 		SGestao();
@@ -32,6 +32,7 @@ class SGestao
 		//----- Métodos Pedidos -----
 
 		bool Load(const string &N_Ficheiro);
+		bool Run();
 		int Contar(Virus* X);
 		Pessoa* PessoaMaisContagios();
 		bool PessoaFonteContagio(const string& BI);

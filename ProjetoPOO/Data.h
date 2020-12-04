@@ -9,7 +9,12 @@ class Data
 	public:
 
 		//----- Construtores e Destrutores -----
-		Data(short int dia, short int mes, short int ano);
+		Data(short int dia, short int mes, short int ano)
+		{
+			Dia = dia;
+			Mes = mes;
+			Ano = ano;
+		}
 		virtual ~Data();
 
 		//----- Gets -----
