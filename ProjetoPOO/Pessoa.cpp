@@ -3,16 +3,26 @@
 #include "time.h"
 #include "Ponto.h"
 #include "Virus.h"
+#include "Uteis.h"
 
 // Inicialização de uma pessoa e geraçao de uma primeira coordenada
 Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual)
 {
-	// cout << "Passei em " << __FUNCTION__ << endl;
 	Nome = nome;
 	strcpy(BI, bi);
 	Cidade = cidade;
 	Idade = idade;
 	Coordenada_Atual = coordenada_atual;
+
+	MovimentosPossiveis.push_back(Ponto(-1, 0));
+	MovimentosPossiveis.push_back(Ponto(1, 0));
+	MovimentosPossiveis.push_back(Ponto(0, 1));
+	MovimentosPossiveis.push_back(Ponto(0, -1));
+
+	for (int i = 0; i < 4; i++)
+	{
+		MovimentosPossiveis.push_back(Ponto(0, 0));
+	}
 }
 
 Pessoa::~Pessoa()
@@ -35,20 +45,23 @@ void Pessoa::Mostrar()
 
 bool Pessoa::Run()
 {
-	cout << "A viver" << endl;
+	//Uteis::MSG("A viver....");
 	Deslocar();
 	return true;
 }
 
 void Pessoa::Deslocar()
 {
-	/*Coordenada tem de ser + ou - 1 e tem de add condição para não ultrapassar os limites*/
+	//Uteis::MSG("A deslocar-se...");
+	//cout << "Posicao atual: " << *Coordenada_Atual << endl;
 
-	//Coordenada_Atual->X += 1;
-	//Coordenada_Atual->Y += 1;
+	int index = rand() % MovimentosPossiveis.size();
+
+	*Coordenada_Atual = *Coordenada_Atual + MovimentosPossiveis[index];
+	//cout << "Nova posicao = " << *Coordenada_Atual << endl;
 }
 
-int Pessoa::escalaoIdade(int Idade)
+/*int Pessoa::escalaoIdade(int Idade)
 {
 	if (Idade < 10)
 		return 0;
@@ -70,5 +83,4 @@ int Pessoa::escalaoIdade(int Idade)
 		return 8;
 	if (Idade >= 90)
 		return 8;
-
-}
+}*/

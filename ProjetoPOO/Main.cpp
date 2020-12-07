@@ -1,18 +1,18 @@
 #include <iostream>
+using namespace std;
 #include "SGestao.h"
 
-
-
-extern void Menu();
 int main()
 {
-	srand(time(NULL));// Não retirar
-
-	SGestao SG;
-	SG.Load("Ficheiro_Teste.txt");
-	SG.Run();
-	return 0;
-}
+    //  srand(time(NULL));// Não retirar
+    cout << "Inicio do programa" << endl;
+    SGestao SG;
+    SG.Load("Ficheiro_Teste.txt");
+    SG.LancarVirus();
+    SG.Run();
+    cout << "Final do programa" << endl;
+    return 0;
+}   
 
 //Tirar o friend class e colocar os metodo publicos pq n é boa pratica
 /*

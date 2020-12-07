@@ -62,5 +62,8 @@
     <ClInclude Include="Cidade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Uteis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

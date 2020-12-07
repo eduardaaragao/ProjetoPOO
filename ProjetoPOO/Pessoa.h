@@ -3,6 +3,7 @@
 
 #include "Ponto.h"
 #include <list>
+#include <vector>
 
 class Virus;
 
@@ -17,7 +18,7 @@ class Pessoa
 		unsigned short int Idade;
 		Ponto* Coordenada_Atual; 
 		list <Virus*> Virus_Contraidos;
-
+		vector<Ponto> MovimentosPossiveis;
 	public:
 		//-----Construtores e Destrutores-----
 
@@ -40,7 +41,7 @@ class Pessoa
 		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }
 
 		//-----Auxiliares-------
-		int escalaoIdade(int idade);
+		//int escalaoIdade(int idade);
 };
 
 #endif // !PESSOA__H

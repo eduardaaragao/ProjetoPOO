@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "SGestao.h"
-
+#include "Uteis.h"
 
 SGestao::SGestao()
 {
@@ -8,7 +8,7 @@ SGestao::SGestao()
     Data* a;
     Virus* virus;
     a = new Data(10, 04, 2019);
-    virus = new Covid("Covid", 10, 62, 33, a);
+    virus = new Covid("Covid-19", 10, 62, 33, a);
     Lista_Virus.push_back(virus);
 
     a = new Data(20, 02, 1998);
@@ -102,7 +102,7 @@ bool SGestao::Load(const string &N_Ficheiro)
     }
     else
     {
-        MSG("\nErro ao abrir o ficheiro\n");
+        Uteis::MSG("\nErro ao abrir o ficheiro\n");
     }
 
     Ficheiro_1.close();
@@ -160,7 +160,7 @@ void SGestao::EscreverXML(const string& fich_xml)
 
 }
 
-string SGestao::CidadeMaisCasos()
+/*string SGestao::CidadeMaisCasos()
 {
     // 12. Determinar a cidade que está a ser mais afetada;
 
@@ -177,7 +177,7 @@ string SGestao::CidadeMaisCasos()
     }
 
     return CID_CASOS;
-}
+}*/
 
 bool SGestao::AlertasAsPessoasProximas(int N, double R)
 {
@@ -186,7 +186,7 @@ bool SGestao::AlertasAsPessoasProximas(int N, double R)
     return true;
 }
 
-int SGestao::EscalaoIdadeMaisAfectado()
+/*int SGestao::EscalaoIdadeMaisAfectado()
 {
     map<int, int> Escalao;
     int i,escalao,idade;
@@ -207,7 +207,7 @@ int SGestao::EscalaoIdadeMaisAfectado()
         it2->second += 1;
     }
     return 0;
-}
+}*/
 
 list<Ponto*>* SGestao::PossivelIr_A_B(Ponto& A, Ponto& B)
 {
@@ -241,7 +241,6 @@ void SGestao::Mostrar_L_Pessoas()
     list<Pessoa*>::iterator it = Lista_Pessoas.begin();
     while (it != Lista_Pessoas.end())
     {
-
         (*it)->Mostrar();
         ++it;
     }
@@ -286,20 +285,35 @@ bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1)
     }
     else
     {
-        MSG("\nErro ao abrir o ficheiro\n");
+        Uteis::MSG("\nErro ao abrir o ficheiro\n");
     }
 
     Ficheiro_1.close();
     return false;
 }
 
-void SGestao::Infectar_Pessoa(Pessoa* pessoa,Virus* virus)
+Pessoa* SGestao::GetPessoa(int i)
 {
-    pessoa->Get_Virus_Contraidos()->push_back(virus);
-    virus->Get_LP().push_back(pessoa);
+    list<Pessoa*>::iterator IT = Lista_Pessoas.begin();
+
+    int j = 0;
+    for (IT; j != i; ++IT)
+    {
+        ++j;
+    }
+    cout << "J = " << j << endl;
+    return *IT;
 }
 
-void SGestao::Mostrar_Casos_Cidades()
+void SGestao::LancarVirus()
+{
+    int pos = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size() - 1);
+    cout << pos << endl;
+   // Pessoa* P = GetPessoa(pos);
+    //AfectarVirusPessoa(V, P);
+}
+
+/*void SGestao::Mostrar_Casos_Cidades()
 {
     // Lista as cidades e seus respectivos números de casos
 
@@ -310,17 +324,19 @@ void SGestao::Mostrar_Casos_Cidades()
         cout << "Cidade: " << (*it)->getCidade() << " [ " << (*it)->getCont() << "]" << endl;
     }
 
-}
+}*/
 
 
 bool SGestao::Run()
 {
+    int cont = 0;
     while (true)
     {
         for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
         {
             (*IT)->Run();
         }
-        system("pause");
+        cont += 1;
+       // cout << "Iteracao: " << cont << endl;
     }
 }

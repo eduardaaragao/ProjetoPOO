@@ -12,7 +12,6 @@ using namespace std;
 #include "Cidade.h"
 #include <map>
 
-
 class SGestao
 {
 	private:
@@ -21,10 +20,10 @@ class SGestao
 		list<Virus *> Lista_Virus; // Lista de vírus cadastrados
 		list<Pessoa*> L_Infetados; // Lista de pessoas infetadas
 		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
-		list<Cidade*> CIDADES;
+		//list<Cidade*> CIDADES;
 	
 	public:	
-		//Construtores e destrutores são públicos
+		//----- Construtores e destrutores são públicos -----
 
 		SGestao();
 		virtual ~SGestao();
@@ -42,9 +41,9 @@ class SGestao
 		void PessoasMaisUmVirus(list<Pessoa*>& L);
 		void RemoverVirus(Virus* X);
 		void EscreverXML(const string& fich_xml);
-		string CidadeMaisCasos();
+		//string CidadeMaisCasos();
 		bool AlertasAsPessoasProximas(int N, double R);
-		int EscalaoIdadeMaisAfectado();
+		//int EscalaoIdadeMaisAfectado();
 		list<Ponto*>* PossivelIr_A_B(Ponto& A, Ponto& B);
 		list<Ponto*>* Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B);
 
@@ -53,8 +52,12 @@ class SGestao
 		bool Gravar_Pessoas(const string& N_Ficheiro_1);
 		void Mostrar_L_Virus();
 		void Mostrar_L_Pessoas();
-		void Infectar_Pessoa(Pessoa* pessoa, Virus* virus);
-		void Mostrar_Casos_Cidades();
+		void LancarVirus();
+
+
+		/// -----
+		Pessoa* GetPessoa(int i);
+		//void Mostrar_Casos_Cidades();
 	
 };
 

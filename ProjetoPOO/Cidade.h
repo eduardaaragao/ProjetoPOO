@@ -3,7 +3,7 @@ using namespace std;
 #ifndef CIDADE__H
 #define CIDADE__H
 
-class Cidade
+/*class Cidade
 {
 	string nome;
 	int cont;
@@ -24,6 +24,6 @@ Cidade::Cidade(string _nome)
 Cidade::~Cidade()
 {
 }
-
+*/
 
 #endif // !CIDADE__H

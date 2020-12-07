@@ -10,9 +10,6 @@ using namespace std;
 #include <list>
 #include <fstream>
 
-//-----Externs-----
-extern void MSG(string Mensagem);
-
 class Pessoa;
 class Virus
 {

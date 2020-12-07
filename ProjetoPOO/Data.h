@@ -15,8 +15,7 @@ class Data
 			Mes = mes;
 			Ano = ano;
 		}
-		virtual ~Data();
-
+		virtual ~Data() {};
 		//----- Gets -----
 
 		short int Get_Dia() { return Dia; }

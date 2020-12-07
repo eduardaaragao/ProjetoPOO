@@ -155,6 +155,7 @@
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Ponto.h" />
     <ClInclude Include="SGestao.h" />
+    <ClInclude Include="Uteis.h" />
     <ClInclude Include="Virus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
