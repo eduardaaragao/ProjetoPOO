@@ -146,7 +146,7 @@ Virus* SGestao::VirusMaisActivo()
 
 void SGestao::PessoasMaisUmVirus(list<Pessoa*>& L)
 {
-    //  8. Determinar as pessoas que podem ter mais do que um vírus;
+    // 8. Determinar as pessoas que podem ter mais do que um vírus;
 }
 
 void SGestao::RemoverVirus(Virus* X)
@@ -254,19 +254,16 @@ bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1)
 
     if (Ficheiro_1.is_open())
     {
-
         list<Pessoa*> ::iterator it1 = Lista_Pessoas.begin();
         list<Virus*> ::iterator it2;
         list<Virus*>* Lv;
 
         while (it1 != Lista_Pessoas.end())
         {
-
-          Ficheiro_1 << (*it1)->Get_BI() << "\t" << (*it1)->Get_Nome() << "\t" << (*it1)->Get_Cidade() << "\t" << (*it1)->Get_Idade() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_X() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_Y();
+            Ficheiro_1 << (*it1)->Get_BI() << "\t" << (*it1)->Get_Nome() << "\t" << (*it1)->Get_Cidade() << "\t" << (*it1)->Get_Idade() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_X() << "\t" << (*it1)->Get_Coordenada_Atual()->Get_Y();
 
           if(!(*it1)->Get_Virus_Contraidos()->empty())
           {
-
               Lv = (*it1)->Get_Virus_Contraidos();
               it2 = Lv->begin();
 
@@ -287,7 +284,7 @@ bool SGestao::Gravar_Pessoas(const string& N_Ficheiro_1)
     {
         Uteis::MSG("\nErro ao abrir o ficheiro\n");
     }
-
+    
     Ficheiro_1.close();
     return false;
 }
@@ -298,18 +295,16 @@ Pessoa* SGestao::GetPessoa(int i)
 
     int j = 0;
     for (IT; j != i; ++IT)
-    {
         ++j;
-    }
-    cout << "J = " << j << endl;
+    // cout << "J = " << j << endl;
     return *IT;
 }
 
 void SGestao::LancarVirus()
 {
     int pos = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size() - 1);
-    cout << pos << endl;
-   // Pessoa* P = GetPessoa(pos);
+    // cout << "POS = " << pos << endl;
+    Pessoa* P = GetPessoa(pos);
     //AfectarVirusPessoa(V, P);
 }
 
@@ -326,11 +321,10 @@ void SGestao::LancarVirus()
 
 }*/
 
-
 bool SGestao::Run()
 {
     int cont = 0;
-    while (true)
+    while (cont!=3)
     {
         for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
         {
@@ -339,4 +333,5 @@ bool SGestao::Run()
         cont += 1;
        // cout << "Iteracao: " << cont << endl;
     }
+    return true;
 }

@@ -1,6 +1,6 @@
-609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59	689	950
-814991297	Ricardo Andrade Nogueira Matos	Manteigas	62	897	353
-843818099	Eduardo Carneiro Paredes Clementino Castro	Pacos de Ferreira	67	713	264
-647507641	Cristiana Eanes Almada Martins Baptista	Amarante	58	981	540
-684741046	Marisa Calado Cardoso Quadros Barbosa	Almeida	48	365	647
-945973986	Leonor Leal Estrela Moreira	Lisboa	60	507	549
+609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59	690	952	Paludismo
+814991297	Ricardo Andrade Nogueira Matos	Manteigas	62	897	353	Ebola
+843818099	Eduardo Carneiro Paredes Clementino Castro	Pacos de Ferreira	67	713	264	Ebola
+647507641	Cristiana Eanes Almada Martins Baptista	Amarante	58	982	539	Paludismo
+684741046	Marisa Calado Cardoso Quadros Barbosa	Almeida	48	365	649
+945973986	Leonor Leal Estrela Moreira	Lisboa	60	508	549	Paludismo

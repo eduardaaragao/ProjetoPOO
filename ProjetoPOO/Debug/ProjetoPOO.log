@@ -1,2 +1,5 @@
 ﻿  Main.cpp
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\Main.cpp(7,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+  SGestao.cpp
+  Gerando Código...
   ProjetoPOO.vcxproj -> C:\Users\eduar\ProjetoPOO\Debug\ProjetoPOO.exe

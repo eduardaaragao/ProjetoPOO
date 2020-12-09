@@ -20,6 +20,7 @@ void Uteis::MSG(string msg)
 
 int Uteis:: GetPosicaoAleatoria(int max)
 {
-	int index;
-	return index = rand() % max;
+	int index = rand() % max;
+
+	return index;
 }
