@@ -9,3 +9,11 @@ Covid::~Covid()
 {
 
 }
+
+int Covid::Contar_Virus(Virus* X) 
+{
+	if (Get_Nome_Virus() == X->Get_Nome_Virus())
+		return 1;
+	return 0;
+
+}

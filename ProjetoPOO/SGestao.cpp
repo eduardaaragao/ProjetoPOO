@@ -111,7 +111,15 @@ bool SGestao::Load(const string &N_Ficheiro)
 
 int SGestao::Contar(Virus* X)
 {
-    // 2. Contar o número de vírus de um dado Tipo;
+    list<Pessoa*> ::iterator it;
+    int cont = 0;
+
+    for (it = L_Infetados.begin();it != L_Infetados.end();it++)
+    {
+        // Percorrer a lista de virus infectados e chamar a contar_Virus
+
+        //(*it)->Get_Virus_Contraidos
+    }
     return 0;
 }
 
@@ -160,7 +168,7 @@ void SGestao::EscreverXML(const string& fich_xml)
 
 }
 
-/*string SGestao::CidadeMaisCasos()
+string SGestao::CidadeMaisCasos()
 {
     // 12. Determinar a cidade que está a ser mais afetada;
 
@@ -177,7 +185,7 @@ void SGestao::EscreverXML(const string& fich_xml)
     }
 
     return CID_CASOS;
-}*/
+}
 
 bool SGestao::AlertasAsPessoasProximas(int N, double R)
 {
@@ -186,28 +194,59 @@ bool SGestao::AlertasAsPessoasProximas(int N, double R)
     return true;
 }
 
-/*int SGestao::EscalaoIdadeMaisAfectado()
+int SGestao::EscalaoIdadeMaisAfectado()
 {
+    // Add uma funçaõ uteis que define escalao da idade
     map<int, int> Escalao;
-    int i,escalao,idade;
+    int i,escalao,Idade;
+    int maxInfetados = 0;
     list<Pessoa*> ::iterator it;
     map<int, int> :: iterator it2;
 
-    for (i = 0; i < 10; i++)
+    for (i = 0; i < 10; i++) // Aloca um escalao de 0 - 9 
     {
         Escalao.emplace(i, 0);
     }
 
+    // conabilizar pessoas infetadas em seu escalao
     for (it = L_Infetados.begin(); it != L_Infetados.end();it++)
     {
-        int idade = (*it)->Get_Idade();
-        escalao = (*it)->escalaoIdade(idade);
+        int Idade = (*it)->Get_Idade();
+        if (Idade < 10)
+            escalao = 0;
+        if (Idade >= 10 && Idade < 20)
+            escalao =  1;
+        if (Idade >= 20 && Idade < 30)
+            escalao = 2;
+        if (Idade >= 30 && Idade < 40)
+            escalao = 3;
+        if (Idade >= 40 && Idade < 50)
+            escalao = 4;
+        if (Idade >= 50 && Idade < 60)
+            escalao = 5;
+        if (Idade >= 60 && Idade < 70)
+            escalao = 6;
+        if (Idade >= 70 && Idade < 80)
+            escalao =  7;
+        if (Idade >= 80 && Idade < 90)
+            escalao = 8;
+        if (Idade >= 90)
+            escalao = 9;
 
         it2 = Escalao.find(escalao);
         it2->second += 1;
     }
-    return 0;
-}*/
+
+    for (it2 = Escalao.begin(); it2 != Escalao.end(); it2++)
+    {
+        if (maxInfetados < it2->second)
+        {
+            maxInfetados = it2->second;
+            escalao = it2->first;
+        }
+    }
+    return escalao;
+}
 
 list<Ponto*>* SGestao::PossivelIr_A_B(Ponto& A, Ponto& B)
 {
@@ -308,7 +347,7 @@ void SGestao::LancarVirus()
     //AfectarVirusPessoa(V, P);
 }
 
-/*void SGestao::Mostrar_Casos_Cidades()
+void SGestao::Mostrar_Casos_Cidades()
 {
     // Lista as cidades e seus respectivos números de casos
 
@@ -319,7 +358,7 @@ void SGestao::LancarVirus()
         cout << "Cidade: " << (*it)->getCidade() << " [ " << (*it)->getCont() << "]" << endl;
     }
 
-}*/
+}
 
 bool SGestao::Run()
 {
@@ -335,3 +374,7 @@ bool SGestao::Run()
     }
     return true;
 }
+
+
+  
+

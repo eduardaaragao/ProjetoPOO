@@ -3,7 +3,7 @@ using namespace std;
 #ifndef CIDADE__H
 #define CIDADE__H
 
-/*class Cidade
+class Cidade
 {
 	string nome;
 	int cont;
@@ -15,15 +15,6 @@ public:
 	~Cidade();
 };
 
-Cidade::Cidade(string _nome)
-{
-	nome = _nome;
-	cont = 0;
-}
 
-Cidade::~Cidade()
-{
-}
-*/
 
 #endif // !CIDADE__H
