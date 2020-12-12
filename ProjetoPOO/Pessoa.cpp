@@ -61,26 +61,3 @@ void Pessoa::Deslocar()
 	//cout << "Nova posicao = " << *Coordenada_Atual << endl;
 }
 
-/*int Pessoa::escalaoIdade(int Idade)
-{
-	if (Idade < 10)
-		return 0;
-	if (Idade >= 10 && Idade < 20)
-		return 1;
-	if (Idade >= 20 && Idade < 30)
-		return 2;
-	if (Idade >= 30 && Idade < 40)
-		return 3;
-	if (Idade >= 40 && Idade < 50)
-		return 4;
-	if (Idade >= 50 && Idade < 60)
-		return 5;
-	if (Idade >= 60 && Idade < 70)
-		return 6;
-	if (Idade >= 70 && Idade < 80)
-		return 7;
-	if (Idade >= 80 && Idade < 90)
-		return 8;
-	if (Idade >= 90)
-		return 8;
-}*/

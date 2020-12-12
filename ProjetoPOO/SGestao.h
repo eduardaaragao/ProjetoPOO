@@ -20,7 +20,7 @@ class SGestao
 		list<Virus *> Lista_Virus; // Lista de vírus cadastrados
 		list<Pessoa*> L_Infetados; // Lista de pessoas infetadas
 		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
-		//list<Cidade*> CIDADES;
+		list<Cidade*> CIDADES;
 	
 	public:	
 		//----- Construtores e destrutores são públicos -----
@@ -41,9 +41,9 @@ class SGestao
 		void PessoasMaisUmVirus(list<Pessoa*>& L);
 		void RemoverVirus(Virus* X);
 		void EscreverXML(const string& fich_xml);
-		//string CidadeMaisCasos();
+		string CidadeMaisCasos();
 		bool AlertasAsPessoasProximas(int N, double R);
-		//int EscalaoIdadeMaisAfectado();
+		int EscalaoIdadeMaisAfectado();
 		list<Ponto*>* PossivelIr_A_B(Ponto& A, Ponto& B);
 		list<Ponto*>* Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B);
 
@@ -57,7 +57,10 @@ class SGestao
 
 		/// -----
 		Pessoa* GetPessoa(int i);
-		//void Mostrar_Casos_Cidades();
+		void Mostrar_Casos_Cidades();
+
+		//-----Auxiliares-------
+		int escalaoIdade(int idade);
 	
 };
 

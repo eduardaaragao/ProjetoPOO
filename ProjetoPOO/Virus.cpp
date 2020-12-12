@@ -24,3 +24,10 @@ void Virus::Infectar_Pessoa(Pessoa* pessoa)
 {
 	pessoa->Get_Virus_Contraidos()->push_back(this);
 }
+
+int Virus::Contar_Virus(Virus* X) 
+{
+	if (Get_Nome_Virus() == X->Get_Nome_Virus())
+		return 1;
+	return 0;
+}

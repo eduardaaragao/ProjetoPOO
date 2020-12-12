@@ -19,6 +19,7 @@ class Pessoa
 		Ponto* Coordenada_Atual; 
 		list <Virus*> Virus_Contraidos;
 		vector<Ponto> MovimentosPossiveis;
+		// int base_contagio; --> indetifica em que nivel da base de contagio esta (base_contagio da pessoa quue infetou + 1)
 	public:
 		//-----Construtores e Destrutores-----
 
@@ -40,8 +41,7 @@ class Pessoa
 		Ponto* Get_Coordenada_Atual() { return Coordenada_Atual; }
 		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }
 
-		//-----Auxiliares-------
-		//int escalaoIdade(int idade);
+		
 };
 
 #endif // !PESSOA__H
