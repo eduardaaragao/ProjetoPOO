@@ -1,16 +1,17 @@
 #include <iostream>
 using namespace std;
 #include "SGestao.h"
+#include "Uteis.h"
 
 int main()
 {
     srand(time(NULL));// Não retirar
-    cout << "Inicio do programa" << endl;
+    Uteis::MSG("Inicio do programa");
     SGestao SG;
     SG.Load("Ficheiro_Teste.txt");
     SG.LancarVirus();
     SG.Run();
-    cout << "Final do programa" << endl;
+    Uteis::MSG("Fim do programa");
     return 0;
 }
 
