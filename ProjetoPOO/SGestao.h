@@ -54,13 +54,16 @@ class SGestao
 		void Mostrar_L_Pessoas();
 		void LancarVirus();
 
+		void AfectarVirusPessoa(Virus* V, Pessoa* P);
+
 
 		/// -----
 		Pessoa* GetPessoa(int i);
+		Virus* GetVirus(int i);
 		void Mostrar_Casos_Cidades();
 
 		//-----Auxiliares-------
-		int escalaoIdade(int idade);
+		//int escalaoIdade(int idade);
 	
 };
 

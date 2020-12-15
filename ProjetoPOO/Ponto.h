@@ -10,7 +10,6 @@ class Ponto
     int X, Y;
 public:
     Ponto(int x = rand() % 1000, int y = rand() % 1000);
-    Ponto(short int x, short int y);
     virtual ~Ponto();
 
     //----- Getters -----

@@ -15,14 +15,14 @@ Virus::~Virus()
 	// cout << "Passei em " << __FUNCTION__ << endl;
 }
 
-void Virus::Mostrar_Virus()
+void Virus::Mostrar()
 {
 	cout << "\nNome: [" << Nome_Virus << "]\nRaio: [" << Raio_Contagio << "]\nTaxa de Contagio: [" << Taxa_Contagio << "]\nPerigosidade: [" << Perigosidade << "]\nData de Inicio: [" << Data_Inicio->Get_Dia() << "/" << Data_Inicio->Get_Mes() << "/" << Data_Inicio->Get_Ano() << "]" << endl;
 }
 
-void Virus::Infectar_Pessoa(Pessoa* pessoa)
+void Virus::AfectarPessoa(Pessoa* P)
 {
-	pessoa->Get_Virus_Contraidos()->push_back(this);
+	LP.push_back(P);
 }
 
 int Virus::Contar_Virus(Virus* X) 

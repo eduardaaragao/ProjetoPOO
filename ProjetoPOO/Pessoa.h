@@ -9,17 +9,17 @@ class Virus;
 
 class Pessoa
 {
-	private:
+private:
 		//-----Atributos-----
 		string Nome;
 		Pessoa(string nome, char* BI, string cidade, unsigned short int idade, Ponto* coordenada_atual, Virus* virus_infectado);
 		char BI[10];
-		string Cidade;
+		string Cidade; // GUSTAVO: Mudar para apontar para elemento da lista das cidades, mudar no LOAD
 		unsigned short int Idade;
 		Ponto* Coordenada_Atual; 
 		list <Virus*> Virus_Contraidos;
 		vector<Ponto> MovimentosPossiveis;
-		// int base_contagio; --> indetifica em que nivel da base de contagio esta (base_contagio da pessoa quue infetou + 1)
+		// bool eBaseContagio;
 	public:
 		//-----Construtores e Destrutores-----
 
@@ -31,6 +31,7 @@ class Pessoa
 		void Mostrar();
 		bool Run();
 		void Deslocar();
+		void FuiInfetado(Virus* V) { Virus_Contraidos.push_back(V);}
 
 		//----- Gets -----
 

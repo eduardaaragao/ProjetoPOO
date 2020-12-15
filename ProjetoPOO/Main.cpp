@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    srand(time(NULL));// Não retirar
+    srand(time(NULL));
     Uteis::MSG("Inicio do programa");
     SGestao SG;
     SG.Load("Ficheiro_Teste.txt");
@@ -15,7 +15,16 @@ int main()
     return 0;
 }
 
-//Tirar o friend class e colocar os metodo publicos pq n é boa pratica
+/*while (true)
+{
+
+    SGestao::run();
+    if (kbhit()) //include do conioh.
+    {
+        getchar();
+        SGestao::Menu();
+    }*/
+
 /*
 Possiveis alterações:
 Criar classe cidade -> Pessoa com ponteiro pra Cidade -> Para guardar informações como quantos infectados na cidade

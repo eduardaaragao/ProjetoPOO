@@ -23,7 +23,7 @@ SGestao::SGestao()
 SGestao::~SGestao()
 {
     // Implemente o destrutor da classe SGestao, que obviamente deve libertar toda a memória ocupada.
-   Gravar_Pessoas("Ficheiro_Pessoa.txt");
+   Gravar_Pessoas("Ficheiro_Teste.txt");
 }
 
 bool SGestao::Load(const string &N_Ficheiro)
@@ -90,7 +90,6 @@ bool SGestao::Load(const string &N_Ficheiro)
                         }
                         ++it;
                     }
-
                 }
             }
 
@@ -143,7 +142,11 @@ int SGestao::Memoria()
 
 void SGestao::PessoasContagiadas(list<Pessoa*>& L)
 {
-    // 6. Determinar as pessoas que estão contagiadas.
+    Uteis::MSG("Lista de Infetados");
+    for (list<Pessoa*>::iterator IT = L.begin(); IT != L.end(); ++IT)
+    {
+        (*IT)->Mostrar();
+    }
 }
 
 Virus* SGestao::VirusMaisActivo()
@@ -270,7 +273,7 @@ void SGestao::Mostrar_L_Virus()
     while (it != Lista_Virus.end())
     {
 
-        (*it)->Mostrar_Virus();
+        (*it)->Mostrar();
         ++it;
     }
 }
@@ -335,16 +338,36 @@ Pessoa* SGestao::GetPessoa(int i)
     int j = 0;
     for (IT; j != i; ++IT)
         ++j;
-    // cout << "J = " << j << endl;
+    return *IT;
+}
+
+Virus* SGestao::GetVirus(int i)
+{
+    list<Virus*>::iterator IT = Lista_Virus.begin();
+    int j = 0;
+    for (IT; j != i; ++IT)
+        ++j;
     return *IT;
 }
 
 void SGestao::LancarVirus()
 {
-    int pos = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size() - 1);
-    // cout << "POS = " << pos << endl;
-    Pessoa* P = GetPessoa(pos);
-    //AfectarVirusPessoa(V, P);
+    int posPessoa = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size() - 1);
+    int posVirus = Uteis::GetPosicaoAleatoria(Lista_Virus.size() - 1);
+
+    Pessoa* P = GetPessoa(posPessoa);
+    Virus* V = GetVirus(posVirus);
+
+    AfectarVirusPessoa(V, P);
+}
+
+void SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
+{
+    P->Get_Virus_Contraidos();
+
+    V->AfectarPessoa(P);    
+    P->FuiInfetado(V);
+    L_Infetados.push_back(P);
 }
 
 void SGestao::Mostrar_Casos_Cidades()
@@ -362,19 +385,11 @@ void SGestao::Mostrar_Casos_Cidades()
 
 bool SGestao::Run()
 {
-    int cont = 0;
-    while (cont!=3)
-    {
         for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
         {
             (*IT)->Run();
         }
-        cont += 1;
        // cout << "Iteracao: " << cont << endl;
-    }
+    PessoasContagiadas(L_Infetados);
     return true;
 }
-
-
-  
-

@@ -7,13 +7,6 @@ Ponto::Ponto(int _x, int _y)
     //ctor
 }
 
-Ponto::Ponto(short int _x, short int _y)
-{
-    X = _x;
-    Y = _y;
-    //ctor
-}
-
 Ponto::~Ponto()
 {
     //dtor

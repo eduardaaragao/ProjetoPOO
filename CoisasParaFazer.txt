@@ -1,0 +1,28 @@
+1. Feito (mas alterar)
+2. Alterar (lista de pessoas no vírus)
+3. Apenas inserir atributo "ContadorContagio" e percorrer lista de pessoa
+4. Inserir variável "bool" para saber se ela é base de um contágio (mudar LOAD)
+5. Gustavo trabalha
+6. Semi-Feito
+7. Vírus que tem mais pessoas infetadas (maior lista de pessoas)
+8. Verificar length da lista dos vírus das pessoas e retornar quando > 1 
+9. Remover tudo do caralho 
+10. Quero gravar a lista das pessoas (Duda)
+11. Trabalha Gustavo
+12. Semi-feito 
+13. Perguntar pro homem
+14. Testar para ver se tá certo
+15. Pesquisar para implementar
+16. Pesquisar para implementar
+
+Para infectar alguém baseado na taxa de contágio:
+
+   bool podeContagiar(int taxa){
+        
+        return rand 0 a 100 > taxa;
+    }
+
+ - Pontos a se ter em consideração quando infectar uma pessoa com o vírus X:
+   - Adicionar esta pessoa à lista de infetados;
+   - Adicionar à lista de X esta pessoa;
+   - Mudar atributo "eBaseContagio" para true;

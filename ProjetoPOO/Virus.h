@@ -30,11 +30,9 @@ class Virus
 		virtual ~Virus();
 
 		//----- Métodos -----
-		void Mostrar_Virus();
-		void Infectar_Pessoa(Pessoa* pessoa);
-		virtual int Contar_Virus(Virus* X);
-		//void AfectarPessoa(Pessoa* P) { LP.push_back(P); } // Um vírus 
-		// ???????????????
+		void Mostrar();
+		void AfectarPessoa(Pessoa* pessoa);
+		virtual int Contar_Virus(Virus* X); //Esse método não é aqui
 
 		//----- Gets -----
 		string Get_Nome_Virus() { return Nome_Virus; }

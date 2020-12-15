@@ -1,6 +1,3 @@
-﻿  Cidade.cpp
-  Main.cpp
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\Main.cpp(7,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  SGestao.cpp
-  Generating Code...
-  ProjetoPOO.vcxproj -> C:\Users\PC\Desktop\POO\ProjetoPOO\Debug\ProjetoPOO.exe
+﻿  SGestao.cpp
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(204,19): warning C4101: 'Idade': variável local não referenciada
+  ProjetoPOO.vcxproj -> C:\Users\eduar\ProjetoPOO\Debug\ProjetoPOO.exe
