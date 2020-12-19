@@ -55,7 +55,7 @@ class SGestao
 		void LancarVirus();
 
 		void AfectarVirusPessoa(Virus* V, Pessoa* P);
-
+		void Menu();
 
 		/// -----
 		Pessoa* GetPessoa(int i);

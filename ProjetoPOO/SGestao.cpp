@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "SGestao.h"
 #include "Uteis.h"
+#include<windows.h>
+#include <conio.h>
 
 SGestao::SGestao()
 {
@@ -142,17 +144,28 @@ int SGestao::Memoria()
 
 void SGestao::PessoasContagiadas(list<Pessoa*>& L)
 {
-    Uteis::MSG("Lista de Infetados");
+    cout << "Quantidade de infetados: " << L.size() << endl;
+    Uteis::MSG("------------ Lista de Infetados ------------");
     for (list<Pessoa*>::iterator IT = L.begin(); IT != L.end(); ++IT)
-    {
         (*IT)->Mostrar();
-    }
 }
 
 Virus* SGestao::VirusMaisActivo()
 {
     // 7. Determinar qual o tipo de vírus que está mais activo;
-    return NULL;
+
+    Virus* maisActivo = NULL;
+    unsigned int maisInfetados = 0;
+
+    for (list<Virus*>::iterator IT = Lista_Virus.begin(); IT != Lista_Virus.end(); ++IT)
+    {
+        if ((*IT)->Get_LP().size() > maisInfetados)
+        {
+            maisInfetados = (*IT)->Get_LP().size();
+            maisActivo = (*IT);
+        }
+    }
+    return maisActivo;
 }
 
 void SGestao::PessoasMaisUmVirus(list<Pessoa*>& L)
@@ -352,13 +365,31 @@ Virus* SGestao::GetVirus(int i)
 
 void SGestao::LancarVirus()
 {
-    int posPessoa = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size() - 1);
-    int posVirus = Uteis::GetPosicaoAleatoria(Lista_Virus.size() - 1);
+    bool notfound = true;
+    bool isEqual = false;
+    int posPessoa, posVirus;
 
-    Pessoa* P = GetPessoa(posPessoa);
-    Virus* V = GetVirus(posVirus);
+    while (notfound)
+    {
+        posPessoa = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size() - 1);
+        posVirus = Uteis::GetPosicaoAleatoria(Lista_Virus.size() - 1);
 
-    AfectarVirusPessoa(V, P);
+        Pessoa* P = GetPessoa(posPessoa);
+        Virus* V = GetVirus(posVirus);
+
+        list<Virus*>* LV = P->Get_Virus_Contraidos();
+
+        for (list<Virus*>::iterator IT = LV->begin(); IT != LV->end(); ++IT)
+        {   
+            if (V == (*IT))
+                isEqual = true;
+        }
+        if (!isEqual)
+        {
+            AfectarVirusPessoa(V, P);
+            notfound = false;
+        }
+    }
 }
 
 void SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
@@ -385,11 +416,51 @@ void SGestao::Mostrar_Casos_Cidades()
 
 bool SGestao::Run()
 {
+    Uteis::MSG("Simulacao a correr....");
+    while (true)
+    {
         for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
-        {
             (*IT)->Run();
-        }
-       // cout << "Iteracao: " << cont << endl;
-    PessoasContagiadas(L_Infetados);
+        if (_kbhit())
+            Menu();
+    }
     return true;
+}
+
+void SGestao::Menu()
+{
+    Uteis::MSG("Simulacao pausada...");
+    int option = 1;
+    while (option != 0)
+    {
+        Sleep(1000);
+        Uteis::MSG("Escolha uma opcao no menu: ");
+        Uteis::MSG("1 - Lancar virus aleatoriamente em uma pessoa");
+        Uteis::MSG("2 - Mostrar todos os dados do sistema");
+        Uteis::MSG("3 - Listar pessoas atualmente contagiadas");
+        Uteis::MSG("4 - Qual e o virus mais activo atualmente?");
+        Uteis::MSG("0 - Voltar para simulacao");
+
+        cin >> option;
+
+        switch (option)
+        {
+        case 1:
+            LancarVirus();
+            Uteis::MSG("Virus lancado.");
+            break;
+        case 2:
+            // Mostrar todos os dados do sistema
+            break;
+        case 3:
+            // Mostrar pessoas atualmente contagiadas
+            PessoasContagiadas(L_Infetados);
+            break;
+        case 4:
+            Virus* V = VirusMaisActivo();
+            V->Mostrar();
+            break;
+        }
+
+    }
 }

@@ -17,7 +17,7 @@ Virus::~Virus()
 
 void Virus::Mostrar()
 {
-	cout << "\nNome: [" << Nome_Virus << "]\nRaio: [" << Raio_Contagio << "]\nTaxa de Contagio: [" << Taxa_Contagio << "]\nPerigosidade: [" << Perigosidade << "]\nData de Inicio: [" << Data_Inicio->Get_Dia() << "/" << Data_Inicio->Get_Mes() << "/" << Data_Inicio->Get_Ano() << "]" << endl;
+	cout << "\nNome: [" << Nome_Virus << "]\nRaio: [" << Raio_Contagio << "]\nTaxa de Contagio: [" << Taxa_Contagio << "]\nPerigosidade: [" << Perigosidade << "]\nData de Inicio: [" << Data_Inicio->Get_Dia() << "/" << Data_Inicio->Get_Mes() << "/" << Data_Inicio->Get_Ano() << "]" << "\nPessoas Infetadas: " << LP.size() << endl;
 }
 
 void Virus::AfectarPessoa(Pessoa* P)
