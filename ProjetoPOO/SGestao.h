@@ -21,7 +21,7 @@ class SGestao
 		list<Pessoa*> L_Infetados; // Lista de pessoas infetadas
 		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
 		list<Cidade*> CIDADES;
-	
+		vector<Ponto*> MovimentosPossiveis;
 	public:	
 		//----- Construtores e destrutores são públicos -----
 
@@ -31,7 +31,6 @@ class SGestao
 		//----- Métodos Pedidos -----
 
 		bool Load(const string &N_Ficheiro);
-		bool Run();
 		int Contar(Virus* X);
 		Pessoa* PessoaMaisContagios();
 		bool PessoaFonteContagio(const string& BI);
@@ -48,19 +47,36 @@ class SGestao
 		list<Ponto*>* Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B);
 
 		//----- Métodos extras ----- Lembrar de tornar privado antes de entregar 
-
+		bool Run(vector<Ponto*>* Movimentos);
 		bool Gravar_Pessoas(const string& N_Ficheiro_1);
+		bool Menu();
+
 		void Mostrar_L_Virus();
 		void Mostrar_L_Pessoas();
+
 		void LancarVirus();
+		bool AfectarVirusPessoa(Virus* V, Pessoa* P);
 
-		void AfectarVirusPessoa(Virus* V, Pessoa* P);
-		void Menu();
+		Pessoa* Conferir_L_Pessoas(list<Pessoa*> Lista, Pessoa* Objeto);
+		Cidade* Conferir_L_Cidade(list<Cidade*> Lista, string Objeto);
+		Virus* Conferir_L_Virus(list<Virus*> Lista, Virus* Objeto);
+		void Mostrar_Casos_Cidades();
 
-		/// -----
 		Pessoa* GetPessoa(int i);
 		Virus* GetVirus(int i);
-		void Mostrar_Casos_Cidades();
+		Virus* GetVirus(string i);
+		vector<Ponto*>* GetMovimentosPossiveis() { return &MovimentosPossiveis; }
+		
+		//----- AUX Menu ------
+
+		void Numero_De_Virus();
+
+		//----- Destuir ------
+
+		void Destruir_L_Pessoas();
+		void Destruir_L_Virus();
+		void Destruir_L_Movimentos();
+		void Destruir_L_Cidades();
 
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);

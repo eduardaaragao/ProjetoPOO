@@ -1,3 +1,8 @@
-﻿  SGestao.cpp
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(217,19): warning C4101: 'Idade': variável local não referenciada
-  ProjetoPOO.vcxproj -> C:\Users\eduar\ProjetoPOO\Debug\ProjetoPOO.exe
+﻿  Pessoa.cpp
+  SGestao.cpp
+C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO V3.0\ProjetoPOO\SGestao.cpp(198,36): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO V3.0\ProjetoPOO\SGestao.cpp(232,42): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO V3.0\ProjetoPOO\SGestao.cpp(252,19): warning C4101: 'Idade': variável local não referenciada
+  Gerando Código...
+C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO V3.0\ProjetoPOO\SGestao.cpp(608): warning C4715: 'SGestao::Menu': nem todos os caminhos de controle retornam um valor
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO V3.0\Debug\ProjetoPOO.exe

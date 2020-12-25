@@ -1,14 +1,14 @@
 1. Feito (mas alterar)
-2. Alterar (lista de pessoas no vírus)
+2. Feito
 3. Apenas inserir atributo "ContadorContagio" e percorrer lista de pessoa
 4. Inserir variável "bool" para saber se ela é base de um contágio (mudar LOAD)
 5. Gustavo trabalha
-6. Semi-Feito
-7. Vírus que tem mais pessoas infetadas (maior lista de pessoas)
+6. Feito
+7. Feito
 8. Verificar length da lista dos vírus das pessoas e retornar quando > 1 
 9. Remover tudo do caralho 
 10. Quero gravar a lista das pessoas (Duda)
-11. Trabalha Gustavo
+11. Feito, porem antes de entregar deve-se fazer um teste e ver se teve alterações
 12. Semi-feito 
 13. Perguntar pro homem
 14. Testar para ver se tá certo

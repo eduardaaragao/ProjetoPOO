@@ -7,8 +7,13 @@ int main()
 {
     srand(time(NULL));
     SGestao SG;
+  
     SG.Load("Ficheiro_Teste.txt");
-    SG.Run();
+  //  SG.Mostrar_Casos_Cidades();
+  //  SG.Mostrar_L_Pessoas();
+  //  SG.Mostrar_L_Virus();
+
+    SG.Run(SG.GetMovimentosPossiveis());
     return 0;
 }
 

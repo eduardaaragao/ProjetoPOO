@@ -13,6 +13,8 @@ Virus::Virus(string nome, short int raio_contagio, short int taxa_contagio, shor
 Virus::~Virus()
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
+	delete(Data_Inicio);
+	LP.clear();
 }
 
 void Virus::Mostrar()
@@ -21,13 +23,7 @@ void Virus::Mostrar()
 }
 
 void Virus::AfectarPessoa(Pessoa* P)
-{
-	LP.push_back(P);
+{	
+	LP.push_back(P);	
 }
 
-int Virus::Contar_Virus(Virus* X) 
-{
-	if (Get_Nome_Virus() == X->Get_Nome_Virus())
-		return 1;
-	return 0;
-}
