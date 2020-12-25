@@ -1,18 +1,3 @@
-#include"Cidade.h"
-#include <iostream>
-
-Cidade::Cidade(string _nome)
-{
-	nome = _nome;
-	
-}
-
-Cidade::~Cidade()
-{
-	Lista_Pessoas.clear();
-}
-
-void Cidade::Mostrar()
-{
-	cout << "\nNome: [" << nome << "]" << "Numero de Infectados: ["<< Lista_Pessoas.size() << "]" <<endl;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:74a7091b1b95e71fb85706182f74c2631090a6433dda51b157f9aa566a577e60
+size 284

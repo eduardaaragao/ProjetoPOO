@@ -1,28 +1,3 @@
-#include "Ponto.h"
-
-Ponto::Ponto(int _x, int _y)
-{
-    X = _x;
-    Y = _y;
-    //ctor
-}
-
-Ponto::~Ponto()
-{
-    //dtor
-}
-
-Ponto Ponto::operator+(const Ponto& P)
-{
-    Ponto Aux;
-    Aux.X = this->X + P.X;
-    Aux.Y = this->Y + P.Y;
-
-    return Aux;
-}
-
-ostream& operator<<(ostream& os, const Ponto& P)
-{
-    os << "X = " << P.X << " Y = " << P.Y << endl;
-    return os;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d43e9c840087e2ba673517b0b04eedd38ff4d38887d524ae126ffc64dd849919
+size 396
