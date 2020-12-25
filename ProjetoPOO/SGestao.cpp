@@ -45,10 +45,17 @@ SGestao::~SGestao()
 {   
     // Implemente o destrutor da classe SGestao, que obviamente deve libertar toda a memória ocupada.
     Gravar_Pessoas("Ficheiro_Teste.txt");
+<<<<<<< HEAD
     Destruir_L_Cidades();
     Destruir_L_Pessoas();
     Destruir_L_Virus();
     Destruir_L_Movimentos();
+=======
+    Destruir_L_Pessoas();
+    Destruir_L_Virus();
+    Destruir_L_Movimentos();
+    Destruir_L_Cidades();
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
     L_Infetados.clear();
     L_Quarentena.clear();
 }
@@ -318,13 +325,22 @@ list<Ponto*>* SGestao::Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B)
 bool SGestao::Run(vector<Ponto*>* Movimentos)
 {
     Uteis::MSG("Simulacao a correr....");
+<<<<<<< HEAD
     bool AUX = true;
     while (AUX)
+=======
+    bool AUX_Sair = true;
+    while (AUX_Sair)
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
     {
         for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
             (*IT)->Run(Movimentos);
         if (_kbhit())
+<<<<<<< HEAD
             AUX = Menu();
+=======
+            AUX_Sair = Menu();
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
     }
     return true;
 }
@@ -443,6 +459,7 @@ void SGestao::LancarVirus()
 
         P = GetPessoa(posPessoa);
         V = GetVirus(posVirus);
+<<<<<<< HEAD
 
         LV = P->Get_Virus_Contraidos();
 
@@ -505,6 +522,70 @@ bool SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
         if (P->Get_Virus_Contraidos()->size() == 1)
         {
 
+=======
+
+        LV = P->Get_Virus_Contraidos();
+
+        notfound = AfectarVirusPessoa(V, P);    
+    }
+}
+    
+Pessoa* SGestao::Conferir_L_Pessoas(list<Pessoa*> Lista, Pessoa* Objeto)
+{
+    if (Lista.empty()) 
+        return NULL;
+
+    list<Pessoa*>::iterator it = Lista.begin(); 
+    while (it != Lista.end())
+    {
+        if ((*it) == Objeto)
+            return (*it);
+        ++it;
+    }
+    return NULL;
+}
+
+Virus* SGestao::Conferir_L_Virus(list<Virus*> Lista, Virus* Objeto)
+{
+    if (Lista.empty())
+        return NULL;
+
+    list<Virus*>::iterator it = Lista.begin();
+    while (it != Lista.end())
+    {
+        if ((*it) == Objeto)
+            return (*it);
+        ++it;
+    }
+    return NULL;
+}
+
+Cidade* SGestao::Conferir_L_Cidade(list<Cidade*> Lista, string N_Cidade)
+{
+    if (Lista.empty())
+        return NULL;
+
+    list<Cidade*>::iterator it = Lista.begin();
+    while (it != Lista.end())
+    {
+        if (_stricmp((*it)->getNome().c_str(), N_Cidade.c_str()) == 0)
+            return (*it);
+        ++it;
+    }
+    return NULL;
+}
+
+bool SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
+{
+    if (Conferir_L_Virus(*P->Get_Virus_Contraidos(),V) == NULL)
+    {
+        V->AfectarPessoa(P);
+        P->FuiInfetado(V);
+        
+        if (P->Get_Virus_Contraidos()->size() == 1)
+        {
+
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
             P->Get_Cidade()->Get_L_Cidade()->push_back(P);
         }
 
@@ -512,9 +593,15 @@ bool SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
         {
             L_Infetados.push_back(P);
         }
+<<<<<<< HEAD
         return false;
     }
     return true;
+=======
+        return true;
+    }
+    return false;
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
 }
 
 /*
@@ -576,7 +663,13 @@ bool SGestao::Menu()
         switch (option)
         {
         case 1:
+<<<<<<< HEAD
             system("cls");
+=======
+            system("pause");
+            system("cls");
+            return true;
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
             break;
         case 2:
             LancarVirus();
@@ -598,13 +691,20 @@ bool SGestao::Menu()
             //Cidade que está a ser mais afetada
             cout << "\nA cidade mais afetada é: " << CidadeMaisCasos() << endl;
             break;
+<<<<<<< HEAD
         case 0:
             return false;
             break;
+=======
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
         }
         system("pause");
         system("cls");
     }
+<<<<<<< HEAD
+=======
+    return false;
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
 }
 
 

@@ -21,6 +21,10 @@ Pessoa::Pessoa(string nome, string bi, Cidade* cidade, unsigned short int idade,
 Pessoa::~Pessoa()
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
+<<<<<<< HEAD
+=======
+	delete(CIDADE);
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
 	delete(Coordenada_Atual);
 	Virus_Contraidos.clear();
 }

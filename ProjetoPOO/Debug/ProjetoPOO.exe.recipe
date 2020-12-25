@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
+<<<<<<< HEAD
   <ProjectOutputs>C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO V3.0\Debug\ProjetoPOO.exe</ProjectOutputs>
+=======
+  <ProjectOutputs>C:\Users\gca9\Documents\Faculdade\POO\Projeto V\ProjetoPOO\Debug\ProjetoPOO.exe</ProjectOutputs>
+>>>>>>> 1fc1e8055da10f2a0a44b18c0823e52bff2914fe
   <ContentFiles></ContentFiles>
   <SatelliteDlls></SatelliteDlls>
   <NonRecipeFileRefs></NonRecipeFileRefs>
