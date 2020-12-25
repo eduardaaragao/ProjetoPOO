@@ -16,7 +16,9 @@ public:
 
     int Get_X() { return X; }
     int Get_Y() { return Y; }
-
+    //----- Seters -----
+    void Set_X(int x) { X = x; }
+    void Set_Y(int y) { Y = y; }
     //----- Operator Overloading ------
     Ponto operator+(const Ponto& P);
     friend ostream& operator<<(ostream& os, const Ponto& P);

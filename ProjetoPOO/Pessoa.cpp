@@ -4,36 +4,32 @@
 #include "Ponto.h"
 #include "Virus.h"
 #include "Uteis.h"
+#include "SGestao.h"
 
 // Inicialização de uma pessoa e geraçao de uma primeira coordenada
-Pessoa::Pessoa(string nome, char* bi, string cidade, unsigned short int idade, Ponto* coordenada_atual)
+Pessoa::Pessoa(string nome, string bi, Cidade* cidade, unsigned short int idade, Ponto* coordenada_atual, bool ebase = false,int contagiosprovocados = 0)
 {
 	Nome = nome;
-	strcpy(BI, bi);
-	Cidade = cidade;
+	BI = bi;
+	CIDADE = cidade;
 	Idade = idade;
 	Coordenada_Atual = coordenada_atual;
-
-	MovimentosPossiveis.push_back(Ponto(-1, 0));
-	MovimentosPossiveis.push_back(Ponto(1, 0));
-	MovimentosPossiveis.push_back(Ponto(0, 1));
-	MovimentosPossiveis.push_back(Ponto(0, -1));
-
-	for (int i = 0; i < 4; i++)
-	{
-		MovimentosPossiveis.push_back(Ponto(0, 0));
-	}
+	eBaseContagio = ebase;
+	ContagiosProvocados = contagiosprovocados;
 }
 
 Pessoa::~Pessoa()
 {
 	// cout << "Passei em " << __FUNCTION__ << endl;
+	delete(CIDADE);
+	delete(Coordenada_Atual);
+	Virus_Contraidos.clear();
 }
 
 void Pessoa::Mostrar()
 {
 
-	cout << "\nNome: [" << Nome << "]\nBI: [" << BI << "]\nCidade: [" << Cidade << "]\nIdade: [" << Idade << "]\nCoordenada X: [" << Coordenada_Atual->Get_X() << "]\nCoordenada Y: [" << Coordenada_Atual->Get_Y() << "]" <<endl;
+	cout << "\nNome: [" << Nome << "]\nBI: [" << BI << "]\nCidade: [" << CIDADE->getNome() << "]\nIdade: [" << Idade << "]\nCoordenada X: [" << Coordenada_Atual->Get_X() << "]\nCoordenada Y: [" << Coordenada_Atual->Get_Y() << "]" <<endl;
 	list<Virus*>:: iterator it = Virus_Contraidos.begin();
 	cout << "Lista de Virus:" << endl;
 	while (it!= Virus_Contraidos.end())
@@ -43,21 +39,31 @@ void Pessoa::Mostrar()
 	}
 }
 
-bool Pessoa::Run()
+bool Pessoa::Run(vector<Ponto*>* Movimentos)
 {
 	//Uteis::MSG("A viver....");
-	Deslocar();
+	Deslocar(Movimentos);
 	return true;
 }
 
-void Pessoa::Deslocar()
+void Pessoa::Deslocar(vector<Ponto*>* Movimentos)
 {
-	//Uteis::MSG("A deslocar-se...");
-	//cout << "Posicao atual: " << *Coordenada_Atual << endl;
 
-	int index = rand() % MovimentosPossiveis.size();
+	//Uteis::MSG("A deslocar-se...\n"); //Para testar
+	//cout << "Posicao atual: " << *Coordenada_Atual << endl; //Para testar
+	
+	int index = rand() % Movimentos->size();
 
-	*Coordenada_Atual = *Coordenada_Atual + MovimentosPossiveis[index];
-	//cout << "Nova posicao = " << *Coordenada_Atual << endl;
+	//cout << *Movimentos->at(index) << endl; //Para testar
+
+	Ponto AUX = *Coordenada_Atual + *Movimentos->at(index);
+
+	if (((0 <= AUX.Get_X()) && (AUX.Get_X() <= 1000) && (0 <= AUX.Get_Y()) && (AUX.Get_Y() <= 1000)))
+	{
+		Coordenada_Atual->Set_X(AUX.Get_X());
+		Coordenada_Atual->Set_Y(AUX.Get_Y());
+	}
+
+	//cout << "Nova posicao = " << *Coordenada_Atual << endl; //Para testar
 }
 

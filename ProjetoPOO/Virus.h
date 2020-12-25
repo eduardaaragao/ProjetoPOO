@@ -30,9 +30,9 @@ class Virus
 		virtual ~Virus();
 
 		//----- Métodos -----
+
 		void Mostrar();
 		void AfectarPessoa(Pessoa* pessoa);
-		virtual int Contar_Virus(Virus* X); //Esse método não é aqui
 
 		//----- Gets -----
 		string Get_Nome_Virus() { return Nome_Virus; }
