@@ -24,3 +24,8 @@ int Uteis:: GetPosicaoAleatoria(int max)
 
 	return index;
 }
+
+bool Uteis::CompararNomes(const string &n1, const string &n2)
+{
+	return (_stricmp(n1.c_str(), n2.c_str()) == 0);
+}

@@ -46,6 +46,7 @@ class SGestao
 		list<Ponto*>* PossivelIr_A_B(Ponto& A, Ponto& B);
 		list<Ponto*>* Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B);
 
+protected:
 		//----- Métodos extras ----- Lembrar de tornar privado antes de entregar 
 		bool Run(vector<Ponto*>* Movimentos);
 		bool Gravar_Pessoas(const string& N_Ficheiro_1);
@@ -69,7 +70,8 @@ class SGestao
 		
 		//----- AUX Menu ------
 
-		void Numero_De_Virus();
+		void MenuContarVirus();
+		void MenuFonteContagio();
 
 		//----- Destuir ------
 

@@ -118,7 +118,6 @@ bool SGestao::Load(const string &N_Ficheiro)
                     list<Virus*> :: iterator it = Lista_Virus.begin();
                     while (it != Lista_Virus.end())
                     {
-
                         if (_stricmp(Vetor_Variaveis[x].c_str(),(*it)->Get_Nome_Virus().c_str()) == 0)
                         {
                             AfectarVirusPessoa((*it),AUX_Pessoa);
@@ -127,20 +126,18 @@ bool SGestao::Load(const string &N_Ficheiro)
                     }
                 }
             }
-
             Lista_Pessoas.push_back(AUX_Pessoa);
             Vetor_Variaveis->clear();
-
         }
 
         Ficheiro_1.close();
+        Run(GetMovimentosPossiveis());
         return true;
     }
     else
     {
         Uteis::MSG("\nErro ao abrir o ficheiro\n");
     }
-
     Ficheiro_1.close();
     return false;
 }
@@ -169,8 +166,18 @@ Pessoa* SGestao::PessoaMaisContagios()
 
 bool SGestao::PessoaFonteContagio(const string& BI)
 {
-    // 4. Verificar se uma dada pessoa esteve na base de algum contágio;
-    return true;
+    for (list<Pessoa*>::iterator IT = L_Infetados.begin(); IT != L_Infetados.end(); ++IT)
+    {
+        if (Uteis::CompararNomes(BI, (*IT)->Get_BI()))
+        {
+            if ((*IT)->Get_eBaseContagio())
+            {
+                (*IT)->Mostrar();
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 int SGestao::Memoria()
@@ -217,7 +224,6 @@ void SGestao::RemoverVirus(Virus* X)
 void SGestao::EscreverXML(const string& fich_xml)
 {
     // 10. Gravar para ficheiro em formato XML um dado modelo;
-
 }
 
 string SGestao::CidadeMaisCasos()
@@ -317,12 +323,14 @@ list<Ponto*>* SGestao::Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B)
 
 bool SGestao::Run(vector<Ponto*>* Movimentos)
 {
-    Uteis::MSG("Simulacao a correr....");
+    Uteis::MSG("Simulação a correr....");
     bool AUX = true;
     while (AUX)
     {
         for (list<Pessoa*>::iterator IT = Lista_Pessoas.begin(); IT != Lista_Pessoas.end(); ++IT)
-            (*IT)->Run(Movimentos);
+        {
+            (*IT)->Run(GetMovimentosPossiveis());
+        }
         if (_kbhit())
             AUX = Menu();
     }
@@ -430,13 +438,12 @@ Virus* SGestao::GetVirus(string nome)
 
 void SGestao::LancarVirus()
 {
-    bool notfound = true;
+    bool foiInfetada = false;
     int posPessoa, posVirus;
     Pessoa* P;
     Virus* V;
-    list<Virus*>* LV;
 
-    while (notfound)
+    while (!foiInfetada)
     {
         posPessoa = Uteis::GetPosicaoAleatoria(Lista_Pessoas.size());
         posVirus = Uteis::GetPosicaoAleatoria(Lista_Virus.size());
@@ -444,9 +451,16 @@ void SGestao::LancarVirus()
         P = GetPessoa(posPessoa);
         V = GetVirus(posVirus);
 
-        LV = P->Get_Virus_Contraidos();
-
-        notfound = AfectarVirusPessoa(V, P);    
+        foiInfetada = AfectarVirusPessoa(V, P);
+        if (foiInfetada)
+        {
+            Uteis::MSG("Pessoa infetada.");
+            if (P->Get_Virus_Contraidos()->size() == 1)
+            {
+                P->set_eBaseContagio(true);
+                Uteis::MSG("Ela agora é base de contágio");
+            }
+        }
     }
 }
     
@@ -497,14 +511,16 @@ Cidade* SGestao::Conferir_L_Cidade(list<Cidade*> Lista, string N_Cidade)
 
 bool SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
 {
-    if (Conferir_L_Virus(*P->Get_Virus_Contraidos(),V) == NULL)
+    if (Conferir_L_Virus(*P->Get_Virus_Contraidos(), V))
     {
+        return false;
+    }
+    else {
         V->AfectarPessoa(P);
         P->FuiInfetado(V);
-        
+
         if (P->Get_Virus_Contraidos()->size() == 1)
         {
-
             P->Get_Cidade()->Get_L_Cidade()->push_back(P);
         }
 
@@ -512,16 +528,9 @@ bool SGestao::AfectarVirusPessoa(Virus* V, Pessoa* P)
         {
             L_Infetados.push_back(P);
         }
-        return false;
+        return true;
     }
-    return true;
 }
-
-/*
-void Ver_L_Infectador()
-{
-
-}*/
 
 void SGestao::Mostrar_Casos_Cidades()
 {
@@ -536,10 +545,10 @@ void SGestao::Mostrar_Casos_Cidades()
 
 }
 
-void SGestao::Numero_De_Virus() 
+void SGestao::MenuContarVirus()
 {
     Mostrar_L_Virus();
-    cout << "\nQual o virus que é desejado?\n";
+    Uteis::MSG("Qual o vírus que deseja selecionar?");
     string N;
     cin >> N;
     Virus* V = GetVirus(N);
@@ -553,38 +562,51 @@ void SGestao::Numero_De_Virus()
     }
 }
 
+void SGestao::MenuFonteContagio()
+{
+    string BI;
+    Uteis::MSG("Digite o BI da pessoa a pesquisar: ");
+    cin >> BI;
+
+    if (PessoaFonteContagio(BI))
+        Uteis::MSG("É fonte de contágio");
+    else
+        Uteis::MSG("NÃO é fonte de contágio");
+}
+
 bool SGestao::Menu()
 {
-    Uteis::MSG("Simulacao pausada...");
+    Uteis::MSG("Simulação pausada...");
     int option = -1;
     while (option != 1)
     {
         Sleep(1000);
-        Uteis::MSG("\nEscolha uma opcao no menu: ");
-        Uteis::MSG("1 - Voltar a simulação");
-        Uteis::MSG("2 - Lancar virus aleatoriamente em uma pessoa");
-        Uteis::MSG("3 - Contar o número de vírus de um dado Tipo");
+        Uteis::MSG("\nEscolha uma opção no menu: ");
+        Uteis::MSG("1 - Voltar à simulação");
+        Uteis::MSG("2 - Lancar vírus aleatoriamente em uma pessoa");
+        Uteis::MSG("3 - Contar o número de vírus de um dado tipo");
         Uteis::MSG("4 - Listar pessoas atualmente contagiadas");
-        Uteis::MSG("5 - Qual e o virus mais activo atualmente?");
+        Uteis::MSG("5 - Qual e o vírus mais activo atualmente?");
         Uteis::MSG("6 - Cidade que está a ser mais afetada");
+        Uteis::MSG("7 - Mostrar pessoas que são base de contágio");
+        Uteis::MSG("8 - Pesquisar se uma dada pessoa é base de contágio");
         Uteis::MSG("0 - Sair do programa");
 
         cin >> option;
 
-        Uteis::MSG("");
         Virus* V;
         switch (option)
         {
         case 1:
             system("cls");
+            return true;
             break;
         case 2:
             LancarVirus();
-            Uteis::MSG("Virus lancado.");
             break;
         case 3:
             // Contar o número de vírus de um dado Tipo
-            Numero_De_Virus();
+            MenuContarVirus();
             break;
         case 4:
             // Mostrar pessoas atualmente contagiadas
@@ -598,6 +620,11 @@ bool SGestao::Menu()
             //Cidade que está a ser mais afetada
             cout << "\nA cidade mais afetada é: " << CidadeMaisCasos() << endl;
             break;
+        case 7:
+            break;
+        case 8:
+            MenuFonteContagio();
+            break;
         case 0:
             return false;
             break;
@@ -606,8 +633,6 @@ bool SGestao::Menu()
         system("cls");
     }
 }
-
-
 
 //----------------- Destruir os Dados -----------------
 

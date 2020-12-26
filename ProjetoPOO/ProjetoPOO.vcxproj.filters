@@ -30,9 +30,6 @@
     <ClCompile Include="Uteis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Ponto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

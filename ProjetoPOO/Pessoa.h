@@ -32,6 +32,9 @@ private:
 		void Deslocar(vector<Ponto*>* Movimentos);
 		void FuiInfetado(Virus* V) { Virus_Contraidos.push_back(V);}
 
+		//---- Sets -----
+		void set_eBaseContagio(bool estado) { eBaseContagio = estado; }
+
 		//----- Gets -----
 
 		string Get_Nome() { return Nome; }
@@ -41,9 +44,7 @@ private:
 		Ponto* Get_Coordenada_Atual() { return Coordenada_Atual; }
 		bool Get_eBaseContagio() { return eBaseContagio; }
 		int Get_ContagiosProvocados() { return ContagiosProvocados; }
-		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }
-
-		
+		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }		
 };
 
 #endif // !PESSOA__H
