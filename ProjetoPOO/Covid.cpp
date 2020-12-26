@@ -1,19 +1,3 @@
-#include "Covid.h"
-
-Covid::Covid(string nome, short int raio_contagio, short int taxa_contagio, short int perigosidade, Data* data_inicio)
- :Virus(nome, raio_contagio, taxa_contagio, perigosidade, data_inicio)
-{
-}
-
-Covid::~Covid()
-{
-
-}
-
-int Covid::Contar_Virus(Virus* X) 
-{
-	if (Get_Nome_Virus() == X->Get_Nome_Virus())
-		return 1;
-	return 0;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b2f9a8dee077dbd98707527eec9ea8e0e3f9a6f985b1aa0dff46cfd187cbe04
+size 363

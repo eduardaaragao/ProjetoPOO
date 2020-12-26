@@ -1,31 +1,3 @@
-#include <iostream>
-using namespace std;
-#include "SGestao.h"
-#include "Uteis.h"
-
-int main()
-{
-    srand(time(NULL));
-    setlocale(0, "Portuguese");
-    SGestao SG;
-  
-    SG.Load("Ficheiro_Teste.txt");
-
-    //SG.Run(SG.GetMovimentosPossiveis());
-    return 0;
-}
-
-/*while (true)
-{
-SGestao::run();
-if (kbhit()) //include do conioh.
-{
-getchar();
-        SGestao::Menu();
-        }*/
-
-/*
-Possiveis alterações:
-Criar classe cidade -> Pessoa com ponteiro pra Cidade -> Para guardar informações como quantos infectados na cidade
-*/
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:26bd91fb34e1d8b4eb4b19a931e881c45ac15d2651f7f38069079960f6f87626
+size 559
