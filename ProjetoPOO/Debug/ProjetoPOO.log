@@ -1,7 +1,7 @@
 ﻿  SGestao.cpp
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(205,36): warning C4018: '>': incompatibilidade de signed/unsigned
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(238,42): warning C4018: '>': incompatibilidade de signed/unsigned
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(258,19): warning C4101: 'Idade': variável local não referenciada
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(445,19): warning C4101: 'LV': variável local não referenciada
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(636): warning C4715: 'SGestao::Menu': nem todos os caminhos de controle retornam um valor
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(206,36): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(239,42): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(259,19): warning C4101: 'Idade': variável local não referenciada
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(385): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
+C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(728): warning C4715: 'SGestao::Menu': nem todos os caminhos de controle retornam um valor
   ProjetoPOO.vcxproj -> C:\Users\eduar\ProjetoPOO\Debug\ProjetoPOO.exe

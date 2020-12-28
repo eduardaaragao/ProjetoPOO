@@ -21,6 +21,9 @@ public:
     void Set_Y(int y) { Y = y; }
     //----- Operator Overloading ------
     Ponto operator+(const Ponto& P);
+    bool operator==(const Ponto& P);
+    bool operator!=(const Ponto& P);
+    bool operator>(const Ponto& P);
     friend ostream& operator<<(ostream& os, const Ponto& P);
 };
 

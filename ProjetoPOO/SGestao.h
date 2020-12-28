@@ -67,6 +67,8 @@ protected:
 		Virus* GetVirus(int i);
 		Virus* GetVirus(string i);
 		vector<Ponto*>* GetMovimentosPossiveis() { return &MovimentosPossiveis; }
+
+		bool HaInfetadoPosicao(Ponto& P);
 		
 		//----- AUX Menu ------
 
@@ -82,6 +84,5 @@ protected:
 
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);
-	
 };
 
