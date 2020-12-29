@@ -45,7 +45,8 @@ private:
 		Ponto* Get_Coordenada_Atual() { return Coordenada_Atual; }
 		bool Get_eBaseContagio() { return eBaseContagio; }
 		int Get_ContagiosProvocados() { return ContagiosProvocados; }
-		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }		
+		list <Virus*>* Get_Virus_Contraidos(){ return &Virus_Contraidos; }	
+		int Get_Virus_Size() { return Virus_Contraidos.size(); }
 };
 
 #endif // !PESSOA__H
