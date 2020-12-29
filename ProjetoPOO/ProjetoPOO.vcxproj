@@ -141,7 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Cidade.cpp" />
     <ClCompile Include="Covid.cpp" />
+    <ClCompile Include="Ebola.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Paludismo.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Ponto.cpp" />
     <ClCompile Include="SGestao.cpp" />
@@ -152,6 +154,8 @@
     <ClInclude Include="Cidade.h" />
     <ClInclude Include="Covid.h" />
     <ClInclude Include="Data.h" />
+    <ClInclude Include="Ebola.h" />
+    <ClInclude Include="Paludismo.h" />
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Ponto.h" />
     <ClInclude Include="SGestao.h" />

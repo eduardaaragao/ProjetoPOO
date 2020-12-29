@@ -34,7 +34,7 @@ private:
 
 		//---- Sets -----
 		void set_eBaseContagio(bool estado) { eBaseContagio = estado; }
-
+		void Set_ContagiosProvocados(int X) { ContagiosProvocados = X; }
 		//----- Gets -----
 
 		string Get_Nome() { return Nome; }

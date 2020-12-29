@@ -39,6 +39,12 @@
     <ClCompile Include="Cidade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ebola.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Paludismo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SGestao.h">
@@ -63,6 +69,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Uteis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ebola.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Paludismo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -8,6 +8,5 @@ public:
 
 	//------------------
 
-	int Contar_Virus(Virus* X);
 };
 

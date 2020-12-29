@@ -40,7 +40,11 @@ class Virus
 		short int Get_Taxa_Contagio() { return Taxa_Contagio; }
 		short int Get_Perigosidade() { return Perigosidade; }
 		Data* Get_Data_Inicio() { return Data_Inicio; }
-		list<Pessoa*> Get_LP() { return LP; }
+		list<Pessoa*>* Get_LP() { return &LP; }
+		bool operator==(Virus* V)
+		{
+			return Nome_Virus == V->Get_Nome_Virus();
+		}
 };
 
 #endif // !VIRUS__H

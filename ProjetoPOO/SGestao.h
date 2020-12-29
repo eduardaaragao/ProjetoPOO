@@ -48,7 +48,7 @@ class SGestao
 
 protected:
 		//----- Métodos extras ----- Lembrar de tornar privado antes de entregar 
-		bool Run(vector<Ponto*>* Movimentos);
+		bool Run();
 		bool Gravar_Pessoas(const string& N_Ficheiro_1);
 		bool Menu();
 
@@ -57,10 +57,8 @@ protected:
 
 		void LancarVirus();
 		bool AfectarVirusPessoa(Virus* V, Pessoa* P);
+		void PassarVirus(Virus* V);
 
-		Pessoa* Conferir_L_Pessoas(list<Pessoa*> Lista, Pessoa* Objeto);
-		Cidade* Conferir_L_Cidade(list<Cidade*> Lista, string Objeto);
-		Virus* Conferir_L_Virus(list<Virus*> Lista, Virus* Objeto);
 		void Mostrar_Casos_Cidades();
 
 		Pessoa* GetPessoa(int i);
@@ -74,7 +72,7 @@ protected:
 
 		void MenuContarVirus();
 		void MenuFonteContagio();
-
+		void MenuEliminarVirus();
 		//----- Destuir ------
 
 		void Destruir_L_Pessoas();
