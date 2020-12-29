@@ -10,8 +10,9 @@ public:
 	static int GetPosicaoAleatoria(int max);
 	static bool CompararNomes(const string &n1, const string& n2);
 	static bool Probabilidade(double Taxa);
-	static Cidade* Conferir_L_Cidade(list<Cidade*> Lista, string N_Cidade);
-	static Virus* Conferir_L_Virus(list<Virus*> Lista, Virus* Objeto);
-	static Pessoa* Conferir_L_Pessoas(list<Pessoa*> Lista, Pessoa* Objeto);
+	static Cidade* Conferir_L_Cidade(list<Cidade*>* Lista, string N_Cidade);
+	static Virus* Conferir_L_Virus(list<Virus*>* Lista, Virus* Objeto);
+	static Pessoa* Conferir_L_Pessoas(list<Pessoa*>* Lista, Pessoa* Objeto);
+	//int Uteis::Contar_Memoria(list<T*>& Lista);
 	//T* Conferir_Lista(list<T*> Lista, T* Objeto);
 };

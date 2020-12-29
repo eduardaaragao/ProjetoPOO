@@ -1,7 +1,10 @@
-﻿  Paludismo.cpp
+﻿  Main.cpp
+C:\Users\gca9\Desktop\ProjetoPOO V4.0\ProjetoPOO\Main.cpp(9,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+  Pessoa.cpp
   SGestao.cpp
-C:\Users\gca9\ProjetoPOO\ProjetoPOO\SGestao.cpp(284,19): warning C4101: 'Idade': variável local não referenciada
+C:\Users\gca9\Desktop\ProjetoPOO V4.0\ProjetoPOO\SGestao.cpp(281,19): warning C4101: 'Idade': variável local não referenciada
+  Uteis.cpp
   Gerando Código...
-C:\Users\gca9\ProjetoPOO\ProjetoPOO\SGestao.cpp(411): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
-C:\Users\gca9\ProjetoPOO\ProjetoPOO\SGestao.cpp(752): warning C4715: 'SGestao::Menu': nem todos os caminhos de controle retornam um valor
-  ProjetoPOO.vcxproj -> C:\Users\gca9\ProjetoPOO\Debug\ProjetoPOO.exe
+C:\Users\gca9\Desktop\ProjetoPOO V4.0\ProjetoPOO\SGestao.cpp(408): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
+C:\Users\gca9\Desktop\ProjetoPOO V4.0\ProjetoPOO\SGestao.cpp(749): warning C4715: 'SGestao::Menu': nem todos os caminhos de controle retornam um valor
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Desktop\ProjetoPOO V4.0\Debug\ProjetoPOO.exe

@@ -31,6 +31,7 @@ private:
 		bool Run(vector<Ponto*>* Movimentos);
 		void Deslocar(vector<Ponto*>* Movimentos);
 		void FuiInfetado(Virus* V) { Virus_Contraidos.push_back(V);}
+		int Memoria();
 
 		//---- Sets -----
 		void set_eBaseContagio(bool estado) { eBaseContagio = estado; }
