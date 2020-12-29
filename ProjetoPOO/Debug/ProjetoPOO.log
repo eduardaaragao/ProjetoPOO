@@ -1,6 +1,5 @@
 ﻿  SGestao.cpp
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\SGestao.cpp(300,25): warning C4129: 'V': unrecognized character escape sequence
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\SGestao.cpp(344,19): warning C4101: 'Idade': unreferenced local variable
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\SGestao.cpp(471): warning C4715: 'SGestao::PossivelIr_A_B': not all control paths return a value
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\SGestao.cpp(818): warning C4715: 'SGestao::Menu': not all control paths return a value
-  ProjetoPOO.vcxproj -> C:\Users\PC\Desktop\POO\ProjetoPOO\Debug\ProjetoPOO.exe
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(311,25): warning C4129: 'V': sequência de escape de caractere não reconhecida
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(355,19): warning C4101: 'Idade': variável local não referenciada
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(482): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Desktop\ProjetoPOO\Debug\ProjetoPOO.exe
