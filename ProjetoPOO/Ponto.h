@@ -11,14 +11,11 @@ class Ponto
     int X, Y;
 
 public:
-    Ponto()
-    {
-        X = rand() % 1000;
-        Y = rand() % 1000;
-    }
     Ponto(int x, int y);
+    Ponto();
     virtual ~Ponto();
     bool EstaNoRaio(Ponto* P, double Raio);
+    int Memoria();
     //----- Getters -----
 
     int Get_X() { return X; }

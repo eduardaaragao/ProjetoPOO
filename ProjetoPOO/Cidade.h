@@ -8,6 +8,7 @@ using namespace std;
 class Pessoa;
 class Cidade
 {
+	//------ Variaveis -----
 	string nome;
 	list <Pessoa*> Lista_Pessoas;
 
@@ -15,6 +16,7 @@ public:
 	Cidade(string _nome);
 	~Cidade();
 	void Mostrar();
+	int Memoria();
 	//------ Gets ------
 
 	string getNome() { return nome; }

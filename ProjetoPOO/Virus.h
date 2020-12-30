@@ -33,7 +33,7 @@ class Virus
 
 		void Mostrar();
 		void AfectarPessoa(Pessoa* pessoa);
-
+		int Memoria();
 		//----- Gets -----
 		string Get_Nome_Virus() { return Nome_Virus; }
 		double Get_Raio_Contagio() { return Raio_Contagio; }

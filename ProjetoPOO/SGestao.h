@@ -20,6 +20,7 @@ class SGestao
 		list<Virus *> Lista_Virus; // Lista de vírus cadastrados
 		list<Pessoa*> L_Infetados; // Lista de pessoas infetadas
 		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
+		list<Pessoa*> L_Falecidos;
 		list<Cidade*> CIDADES;
 		vector<Ponto*> MovimentosPossiveis;
 	public:	
@@ -47,10 +48,11 @@ class SGestao
 		list<Ponto*>* Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B);
 
 protected:
-		//----- Métodos extras ----- Lembrar de tornar privado antes de entregar 
+		//----- Métodos extras ----- 
 		bool Run();
 		bool Gravar_Pessoas(const string& N_Ficheiro_1);
 		bool Menu();
+		void PrintarSistema();
 
 		void Mostrar_L_Virus();
 		void Mostrar_L_Pessoas();
@@ -69,17 +71,11 @@ protected:
 		bool HaInfetadoPosicao(Ponto& P);
 		
 		//----- AUX Menu ------
-
 		void MenuContarVirus();
 		void MenuFonteContagio();
 		void MenuEliminarVirus();
-		//----- Destuir ------
-
-		void Destruir_L_Pessoas();
-		void Destruir_L_Virus();
-		void Destruir_L_Movimentos();
-		void Destruir_L_Cidades();
-
+		void Menu_Virus_Mais_Ativo();
+		void Menu_Andar_Entre_Pontos();
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);
 };
