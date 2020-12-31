@@ -50,6 +50,8 @@ class SGestao
 protected:
 		//----- Métodos extras ----- 
 		bool Run();
+
+		bool Load_Falecidos(const string& N_Ficheiro);
 		bool Gravar_Pessoas(const string& N_Ficheiro_1);
 		bool Menu();
 		void PrintarSistema();
@@ -76,6 +78,7 @@ protected:
 		void MenuEliminarVirus();
 		void Menu_Virus_Mais_Ativo();
 		void Menu_Andar_Entre_Pontos();
+		void Menu_Mostrar_Dados();
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);
 };

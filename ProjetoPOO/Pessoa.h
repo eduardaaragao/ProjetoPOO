@@ -18,11 +18,12 @@ private:
 		Ponto* Coordenada_Atual; 
 		list <Virus*> Virus_Contraidos;
 		bool eBaseContagio;
-		int ContagiosProvocados;
+		unsigned short int ContagiosProvocados;
+		unsigned short int DiasQuarentena;
 	public:
 		//-----Construtores e Destrutores-----
 
-		Pessoa(string nome, string bi, Cidade* cidade, unsigned short int idade, Ponto* coordenada_atual, bool ebase, int contagiosprovocados);
+		Pessoa(string nome, string bi, Cidade* cidade, unsigned short int idade, Ponto* coordenada_atual, bool ebase, unsigned short int contagiosprovocados, unsigned short int DiasQuarentena);
 		virtual ~Pessoa();
 
 		//----- Métodos -----
@@ -37,12 +38,14 @@ private:
 		//---- Sets -----
 		void set_eBaseContagio(bool estado) { eBaseContagio = estado; }
 		void Set_ContagiosProvocados(int X) { ContagiosProvocados = X; }
+		void Set_DiasQuarentena(unsigned short int X) { DiasQuarentena = X; }
 		//----- Gets -----
 
 		string Get_Nome() { return Nome; }
 		string Get_BI() { return BI; }
 		Cidade* Get_Cidade() { return CIDADE; }
 		int Get_Idade() { return Idade; }
+		int Get_DiasQuarentena() { return DiasQuarentena; }
 		Ponto* Get_Coordenada_Atual() { return Coordenada_Atual; }
 		bool Get_eBaseContagio() { return eBaseContagio; }
 		int Get_ContagiosProvocados() { return ContagiosProvocados; }

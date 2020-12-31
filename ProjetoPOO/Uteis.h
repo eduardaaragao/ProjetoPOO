@@ -42,7 +42,7 @@ public:
 		Lista->clear();
 	}
 
-	//------------ Conta a Memoria ------------
+	//------------ Contar a Memoria ------------
 
 	template <class T>
 	static int Contar_Memoria(list<T*>* Lista)
@@ -83,6 +83,27 @@ public:
 			++IT;
 		}
 		return Cont;
+	}
+
+	//------------ Mostrar Lista ------------
+
+	template <class T>
+	static void Mostrar_Lista(list<T*>* Lista)
+	{
+		if (Lista->empty()) 
+		{
+			Uteis::MSG("\nNão a elementos na lista.");
+			return;
+		}
+
+		cout << "Número de elementos na lista: " << Lista->size() << endl;
+		Uteis::MSG("------------ Lista ------------");
+		auto IT = Lista->begin();;
+		while(IT != Lista->end())
+		{
+			(*IT)->Mostrar();
+			++IT;
+		}
 	}
 };
 

@@ -1,6 +1,5 @@
-609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59	509	326	0	0
-814991297	Ricardo Andrade Nogueira Matos	Manteigas	62	716	320	0	0
-843818099	Eduardo Carneiro Paredes Clementino Castro	Pacos de Ferreira	67	158	85	0	0
-647507641	Cristiana Eanes Almada Martins Baptista	Amarante	58	562	593	0	0
-684741046	Marisa Calado Cardoso Quadros Barbosa	Almeida	48	786	0	0	0
-945973986	Leonor Leal Estrela Moreira	Lisboa	60	247	398	0	0
+609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59	754	265	0	0	0
+647507641	Cristiana Eanes Almada Martins Baptista	Amarante	58	278	410	1	1	0	Ebola
+843818099	Eduardo Carneiro Paredes Clementino Castro	Pacos de Ferreira	67	531	115	1	0	0
+814991297	Ricardo Andrade Nogueira Matos	Manteigas	62	519	411	1	0	0	Covid-19
+684741046	Marisa Calado Cardoso Quadros Barbosa	Almeida	48	688	227	1	0	0	Ebola
