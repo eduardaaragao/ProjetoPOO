@@ -1,4 +1,3 @@
 ﻿  SGestao.cpp
-C:\Users\gca9\Desktop\ProjetoPOO V6.0\ProjetoPOO\SGestao.cpp(321,25): warning C4129: 'V': sequência de escape de caractere não reconhecida
-C:\Users\gca9\Desktop\ProjetoPOO V6.0\ProjetoPOO\SGestao.cpp(492): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
-  ProjetoPOO.vcxproj -> C:\Users\gca9\Desktop\ProjetoPOO V6.0\Debug\ProjetoPOO.exe
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(485): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Desktop\ProjetoPOO\Debug\ProjetoPOO.exe

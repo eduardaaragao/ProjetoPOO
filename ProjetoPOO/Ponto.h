@@ -30,6 +30,5 @@ public:
     bool operator>(const Ponto& P);
     friend ostream& operator<<(ostream& os, const Ponto& P);
 };
-
 #endif // PONTO_H
 

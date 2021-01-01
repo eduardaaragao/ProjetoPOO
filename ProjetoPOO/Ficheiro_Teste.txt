@@ -1,5 +1,6 @@
-609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59	754	265	0	0	0
-647507641	Cristiana Eanes Almada Martins Baptista	Amarante	58	278	410	1	1	0	Ebola
-843818099	Eduardo Carneiro Paredes Clementino Castro	Pacos de Ferreira	67	531	115	1	0	0
-814991297	Ricardo Andrade Nogueira Matos	Manteigas	62	519	411	1	0	0	Covid-19
-684741046	Marisa Calado Cardoso Quadros Barbosa	Almeida	48	688	227	1	0	0	Ebola
+406522399	Carmo Nogueira Paredes Farias	Marco de Canaveses	66	523	100	0	0	0
+987559791	Carla Proenca Carneiro Antunes Moreno	Castro Marim	58	523	555	0	0	0
+486925411	Luis Paredes Caiado Seixas	Castro Daire	26	210	902	0	0	0
+179470994	Camilo Azenha Barros Ferraz Santos	Lamego	23	307	921	0	0	0
+221991547	Odete Carrico Ferro Rocha Almada	Macao	53	181	206	0	0	0
+876777314	Alzinda Ferro Queiros Bogas	Sousel	25	239	460	0	0	0

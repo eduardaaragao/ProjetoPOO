@@ -52,7 +52,7 @@ protected:
 		bool Run();
 
 		bool Load_Falecidos(const string& N_Ficheiro);
-		bool Gravar_Pessoas(const string& N_Ficheiro_1);
+		bool Gravar_Pessoas(list<Pessoa*>* Lista, const string& N_Ficheiro_1);
 		bool Menu();
 		void PrintarSistema();
 
@@ -79,6 +79,7 @@ protected:
 		void Menu_Virus_Mais_Ativo();
 		void Menu_Andar_Entre_Pontos();
 		void Menu_Mostrar_Dados();
+		void MenuEscalao();
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);
 };
