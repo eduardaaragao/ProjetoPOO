@@ -14,6 +14,7 @@ public:
 	static Cidade* Conferir_L_Cidade(list<Cidade*>* Lista, string N_Cidade);
 	static Virus* Conferir_L_Virus(list<Virus*>* Lista, Virus* Objeto);
 	static Pessoa* Conferir_L_Pessoas(list<Pessoa*>* Lista, Pessoa* Objeto);
+	static int getRandomPonto();
 	//int Contar_Memoria(list<T*>* Lista);
 	
 	//------------ Libera a Memoria ------------

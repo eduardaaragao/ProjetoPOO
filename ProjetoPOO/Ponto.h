@@ -16,14 +16,14 @@ public:
     virtual ~Ponto();
     bool EstaNoRaio(Ponto* P, double Raio);
     int Memoria();
-    //----- Getters -----
+        /*GETTERS*/
 
     int Get_X() { return X; }
     int Get_Y() { return Y; }
-    //----- Seters -----
+        /*SETTERS*/
     void Set_X(int x) { X = x; }
     void Set_Y(int y) { Y = y; }
-    //----- Operator Overloading ------
+    /* OPERATOR OVERLOADING*/
     Ponto operator+(const Ponto& P);
     bool operator==(const Ponto& P);
     bool operator!=(const Ponto& P);

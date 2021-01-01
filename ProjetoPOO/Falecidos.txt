@@ -1,1 +1,197 @@
 731104149	Ana Andrade Amora Quadros Peres	Nisa	69	551	306	1	0	0	Paludismo
+152020749	Francisca Almeida Mendes Pinto Regueira	Anadia	36	113	534	1	0	0	Covid-19
+893609069	Francisco Carvalheira Rosado Almada Barros	Castro Verde	24	256	74	0	0	0	Ebola
+894332443	Lucas Mendes Nogueira Clementino Martins	Viseu	61	254	50	0	0	0	Ebola
+537436444	Carina Brito Dinis Cardoso	Almeida	52	956	766	1	0	0	Ebola
+410309968	Carmo Caneco Coelho Real	Almeida	32	257	19	0	0	0	Ebola
+808049614	Cristiano Soeiro Macedo Carrasco	S. Pedro do Sul	52	253	7	0	0	0	Ebola
+918152536	Carla Estrela Carmona Matos Eanes	Ribeira de Pena	56	334	110	0	0	0	Covid-19
+694365809	Cristiana Dias Caiado Brito	Mogadouro	51	221	0	0	0	0	Ebola
+479294690	Carina Carrasco Pinheiro Almada Silva	Coruche	53	270	10	0	0	0	Ebola
+080759227	Celso Quadros Peres Matos	Macedo de Cavaleiros	38	265	13	0	0	0	Ebola
+114734479	Bruno Aguiar Barros Leal	Ferreira do Zezere	69	212	28	0	0	0	Ebola
+830296516	Clotilde Andrade Amorim Castro Mourao	Tabua	49	789	265	0	0	0	Paludismo
+491852966	Celina Brito Azevedo Leao	Peniche	70	263	50	0	0	0	Ebola
+007633876	Dulcineia Pires Almeida Caiado	Anadia	19	267	19	0	0	0	Ebola
+102515024	Rita Azeredo Lobato Carmona	Valenca	66	365	78	0	0	0	Covid-19
+010255205	Lucas Macedo Mateus Baptista Mendes	Pedrogao Grande	32	274	11	0	0	0	Ebola
+230781388	Dora Carmona Vivas Amado Martins	Golega	23	202	15	0	0	0	Ebola
+081337738	Celina Andrade Leao Azenha	Mora	49	774	275	0	0	0	Paludismo
+193433115	Joana Vivas Eanes Estrela	Montalegre	61	238	30	0	34	0	Ebola
+582285226	Bruna Carneiro Moreno Leal	Armamar	50	674	488	1	0	0	Paludismo
+911464663	Basilio Ramalho Leal Bogas Farias	Porto de Mos	32	255	23	0	0	0	Ebola
+214946086	Luis Belchior Brito Caiado	Lagoa (Algarve)	43	219	45	0	0	0	Ebola
+644601144	Soraia Bacelar Barbosa Azevedo Tinoco	Almodovar	57	797	278	0	0	0	Paludismo
+586289499	Carla Soeiro Aguiar Calado Nogueira	Mirandela	22	249	68	0	0	0	Ebola
+450759398	Dolores Real Cardoso Pires Lopes	Ourem	55	222	49	0	0	0	Ebola
+085317501	Clarice Mora Eanes Caneco Leao	Evora	50	231	28	0	0	0	Ebola
+594195755	Carlota Leal Almada Paredes	Penafiel	48	507	32	1	0	0	Paludismo
+739383656	Joana Soeiro Nogueira Rego Nascimento	Fafe	45	236	67	0	0	0	Ebola
+811533685	Hugo Peres Pinto Clementino Cardoso	Guarda	51	265	38	0	0	0	Ebola
+900500817	Luis Pires Peres Castanheira Sequeira	Vinhais	19	769	289	0	0	0	Paludismo
+228826147	Celino Soeiro Estrela Castanheira Mota	Felgueiras	44	69	387	0	0	0	Ebola
+463814248	Carla Santos Mendes Carmona	Gouveia	21	93	332	0	0	0	Ebola
+139419878	Camilo Fonseca Amorim Azevedo	Miranda do Corvo	67	65	373	0	0	0	Ebola
+318035910	Boris Almeida Moreira Matos Valbom	Paredes	63	212	13	0	0	0	Ebola
+334052373	Francisco Sequeira Tinoco Mateus Rosado	Anadia	55	262	50	0	0	0	Ebola
+302281914	Dulcineia Bogas Castro Arantes Carmona	Braga	47	53	380	0	0	0	Ebola
+922449460	Paula Mendes Aguiar Estrela Lobato	Vagos	61	754	256	0	0	0	Paludismo
+224188023	Joana Sequeira Santos Queiros	Celorico da Beira	59	238	26	0	0	0	Ebola
+998773106	Francisco Lopes Vivas Azenha Caiado	Tomar	65	769	270	0	0	0	Paludismo
+005743263	Lucas Caneco Real Tinoco Nascimento	Vila Real	38	234	1	0	0	0	Ebola
+020506908	Paula Leao Moura Cabral Dinis	Gondomar	42	60	352	0	0	0	Ebola
+052696228	Alzinda Leal Caneco Amorim Dinis	Soure	70	112	361	0	0	0	Ebola
+733626012	Dolores Amora Caneco Pacheco Castro	Lourinha	49	240	43	0	0	0	Ebola
+313754746	Carmo Bogas Arantes Almeida Mendes	Mertola	58	88	374	0	0	0	Ebola
+970891204	Maria Brito Caneco Mota Azeredo	Barcelos	63	59	346	0	0	0	Ebola
+413741271	Valdemar Moreira Caneco Belchior Mourao	Vila Nova de Gaia	70	71	328	0	0	0	Ebola
+697909758	Carlota Matos Castro Paredes	Sabrosa	42	76	378	0	0	0	Ebola
+433882714	Dulce Amorim Caneco Matos Baptista	Caldas da Rainha	66	800	280	0	0	0	Paludismo
+756459518	Paulo Almada Andrade Bogas	Fundao	52	48	346	0	0	0	Ebola
+597967971	Cristina Antunes Domingos Calado Andrade	Pinhel	45	34	355	0	0	0	Ebola
+219530145	David Queiros Farias Calado Coelho	Vila Verde	60	336	86	0	0	0	Covid-19
+320653920	Eduardo Moreira Amorim Azevedo	Ponte de Lima	20	70	384	0	0	0	Ebola
+733379891	Francisco Cunha Almada Pinto Arantes	Marco de Canaveses	39	254	10	0	0	0	Ebola
+214791484	Eduarda Mota Pinheiro Lopes	Vinhais	27	43	355	0	0	0	Ebola
+787534367	Dina Proenca Castanheira Ferraz Carmona	Lourinha	32	245	27	0	0	0	Ebola
+162845509	David Nunes Cabral Almeida	Meda	30	329	108	0	0	0	Covid-19
+065561142	Daniel Eanes Carreira Silva	Santarem	59	746	266	0	0	0	Paludismo
+689357859	Lucas Quadros Azevedo Mateus	Gois	39	252	53	0	0	0	Ebola
+409252314	Dulce Nunes Pires Brito Caneco	Macedo de Cavaleiros	54	783	286	0	0	0	Paludismo
+443465464	Dolores Coelho Barbosa Estrela Brito	Seia	21	74	394	0	0	0	Ebola
+629433049	David Seixas Lopes Mora Rego	Tondela	54	53	345	0	0	0	Ebola
+520819410	Valdemar Belchior Proenca Cunha	Chaves	25	69	346	0	0	0	Ebola
+864357827	Catarina Andrade Pinheiro Castanheira Cipriano	Amadora	55	212	6	0	0	0	Ebola
+172939658	Carlota Estrela Mendes Amora Nascimento	Miranda do Douro	59	315	102	0	0	0	Covid-19
+522540039	Bernardo Proenca Carvalheira Real Mendes	S. Pedro do Sul	64	258	48	0	0	0	Ebola
+261659001	Dora Mota Amora Castanheira	Mirandela	26	783	234	0	0	0	Paludismo
+384305269	Rita Caneco Azeredo Rocha	Penela	58	276	43	0	0	0	Ebola
+161895019	Rodolfo Soeiro Andrade Belchior Amado	Penafiel	33	36	367	0	0	0	Ebola
+829939415	Paulo Matos Arouca Caiado Castanheira	Sabugal	43	65	373	0	0	0	Ebola
+464835532	Hugo Bacelar Mota Fonseca Domingos	Murtosa	57	350	92	0	0	0	Covid-19
+965158682	Dulce Lobato Mourao Amorim Fonseca	Vila Verde	68	230	65	0	0	0	Ebola
+600974699	Rodolfo Rego Ramalho Rosado Castanheira	Baiao	47	768	306	0	0	0	Paludismo
+569762401	Dulce Ferraz Rosado Farias Domingos	Nazare	54	102	343	0	0	0	Ebola
+900271795	Celina Azevedo Rocha Estrela Matos	Viseu	47	82	338	0	0	0	Ebola
+743895626	Carla Castanheira Mourao Rosado Estrela	Vila Real	33	248	40	0	0	0	Ebola
+726545182	Cristiano Matos Rosado Clementino Amora	Braganca	36	325	91	0	0	0	Covid-19
+232880061	Lucas Peres Mota Vivas Barbosa	Oliveira de Frades	65	242	12	0	0	0	Ebola
+512138299	Cristina Valbom Peres Farias Matos	Ponte de Lima	25	390	780	1	0	0	Covid-19
+779316278	Odete Martins Carvalheira Macedo Carmona	Moncao	46	76	320	0	0	0	Ebola
+446121886	Clotilde Paredes Ferraz Pinheiro Caiado	Moncao	33	742	272	0	0	0	Paludismo
+188545720	Valdemar Aguiar Bogas Antunes Paredes	Oleiros	68	243	17	1	14	0	Ebola
+267252943	Liliana Carmona Soeiro Amora Azevedo	Alter do Chao	25	231	21	0	0	0	Ebola
+740850187	Cristiano Nogueira Amora Mendes Real	Chaves	44	57	335	0	0	0	Ebola
+005458846	Francisca Mendes Azevedo Moreira Cabral	Mogadouro	55	332	95	0	6	0	Covid-19
+985244738	Francisca Rosado Soeiro Real	Vila do Conde	29	341	102	0	0	0	Covid-19
+661184400	Duarte Moreno Caneco Amora Rego	Vila do Conde	41	52	337	0	0	0	Ebola
+101356475	Dulce Estrela Cunha Brito	Oleiros	26	755	281	0	0	0	Paludismo
+181346601	Bruno Pinto Baptista Caneco Mendes	Macedo de Cavaleiros	36	64	360	0	0	0	Ebola
+878698374	Dina Soeiro Aguiar Pires Clementino	Lamego	25	793	266	0	0	0	Paludismo
+025825396	Maria Soeiro Andrade Moreira	Campo Maior	64	89	375	0	0	0	Ebola
+427411335	Bruna Caiado Soeiro Azeredo Proenca	Pedrogao Grande	47	92	926	1	0	0	Covid-19
+448655288	Bernardo Brito Real Bacelar Regueira	S. Joao da Pesqueira	58	65	341	0	0	0	Ebola
+223980187	Leonor Cipriano Moreira Mendes	Vieira do Minho	47	753	261	0	0	0	Paludismo
+964388354	Boris Amora Calado Moreira Caiado	Faro	34	93	333	0	0	0	Ebola
+412512906	Luis Estrela Mourao Santos Castanheira	Estremoz	28	245	58	0	0	0	Ebola
+060704427	Hugo Calheiros Ramalho Andrade	Ponte da Barca	20	775	268	0	0	0	Paludismo
+167418968	Silvia Cardoso Lobato Pinheiro Amorim	Constancia	36	272	49	0	0	0	Ebola
+176082862	Silvia Lopes Calheiros Farias	Sabugal	29	65	373	0	0	0	Ebola
+773575745	Dina Azenha Calado Tinoco Almeida	S. Joao da Madeira	27	782	278	0	0	0	Paludismo
+191869844	Pedro Dinis Mourao Silva Real	Serta	30	96	333	0	0	0	Ebola
+013075086	Clotilde Vivas Clementino Real Mota	Chaves	28	775	280	0	0	0	Paludismo
+931166446	Dulce Regueira Baptista Estrela	Valpacos	54	242	426	1	0	0	Covid-19
+455938664	Celina Dias Ferraz Baptista	Nazare	19	785	276	0	0	0	Paludismo
+920653546	Cristina Carreira Amorim Moura	Ansiao	24	264	49	0	0	0	Ebola
+217788313	Dulcineia Dias Nogueira Carreira Nascimento	Maia	65	773	275	1	34	0	Paludismo
+070549843	Celino Dias Rego Pinto Lopes	Peso da Regua	23	316	110	0	0	0	Covid-19
+297617873	Celino Soeiro Peres Cunha	Albergaria-A-Velha	51	327	96	0	0	0	Covid-19
+587856047	Hugo Bogas Proenca Leal Rego	Montemor-O-Novo	65	747	256	0	0	0	Paludismo
+963422383	Ana Soeiro Ferraz Castro Mora	Estremoz	19	93	358	0	0	0	Ebola
+390948746	Valdemar Vivas Eanes Estrela	Vila do Conde	44	218	0	0	0	0	Ebola
+629323591	Dolores Arouca Domingos Barbosa Nascimento	Amarante	38	581	23	0	0	0	Covid-19
+925736512	Cristiano Soeiro Macedo Almada	Alvaiazere	47	295	257	1	0	0	Paludismo
+639003540	Celina Cipriano Macedo Clementino	Vila Nova de Gaia	22	802	314	0	0	0	Paludismo
+099014700	Celina Macedo Andrade Moura	Ourem	22	108	348	0	0	0	Ebola
+696717950	Carla Regueira Barros Carrico	Montalegre	28	209	8	0	0	0	Ebola
+472738027	Rodolfo Moreno Rego Estrela	Ponte de Lima	25	234	7	0	0	0	Ebola
+224615082	Paulo Arouca Almeida Carneiro	Oliveira de Azemeis	70	780	305	0	0	0	Paludismo
+210532584	Dulcineia Leal Brito Mora Regueira	Viseu	31	774	269	0	0	0	Paludismo
+276126493	Maria Clementino Tinoco Queiros Farias	Guarda	61	574	18	0	0	0	Covid-19
+475318282	Rodolfo Amado Cunha Carneiro	Caldas da Rainha	63	84	371	0	0	0	Ebola
+408396929	Marisa Cipriano Regueira Andrade	Torres Novas	27	264	52	0	0	0	Ebola
+352918011	Joana Barros Nascimento Lobato Carvalheira	Vila Nova de Famalicao	33	754	272	0	0	0	Paludismo
+276572542	Bruno Ferraz Pacheco Belchior Real	Mirandela	20	207	16	0	0	0	Ebola
+858649794	Marisa Real Carreira Leao Nogueira	Viseu	48	760	245	0	0	0	Paludismo
+720169636	Clotilde Almada Azevedo Rego Pires	Almeida	19	780	299	0	13	0	Paludismo
+316690249	Francisca Aguiar Caiado Moura Santos	Soure	36	44	344	0	0	0	Ebola
+713938955	Carina Tinoco Amora Rocha Proenca	Cabeceiras de Basto	21	581	22	0	0	0	Covid-19
+696013249	Silvia Dinis Nascimento Coelho	Vila Velha de Rodao	60	61	319	0	0	0	Ebola
+769629218	Soraia Domingos Nogueira Nunes Caiado	Ponte de Sor	63	578	22	0	0	0	Covid-19
+322589876	Camilo Fonseca Pinto Real Brito	Vila Nova de Cerveira	23	59	386	0	0	0	Ebola
+790181644	Silvia Seixas Eanes Amado Mourao	Gouveia	35	95	351	0	0	0	Ebola
+939454880	Celso Cipriano Tinoco Quadros	Evora	60	99	352	0	0	0	Ebola
+515275069	Soraia Cardoso Rocha Brito Rego	Porto	37	339	98	0	0	0	Covid-19
+142248018	Valdemar Caiado Belchior Barros	Lamego	34	250	6	0	0	0	Ebola
+689258624	Carla Lopes Proenca Mota Matos	Lourinha	61	795	324	0	0	0	Paludismo
+910585246	Eduardo Matos Pacheco Bogas Arantes	Penafiel	39	337	88	0	0	0	Covid-19
+008914828	Leonor Pacheco Nascimento Arantes Mendes	Amarante	43	591	20	0	0	0	Covid-19
+493153483	Ana Ferro Amorim Ramalho Domingos	S. Pedro do Sul	33	597	15	0	0	0	Covid-19
+749218540	Marisa Arantes Pinheiro Rocha Paredes	Sabugal	69	240	33	0	0	0	Ebola
+848092685	Dulce Andrade Barbosa Lopes	Vila Nova de Famalicao	39	38	339	0	0	0	Ebola
+562655272	Boris Nascimento Baptista Castro Azevedo	Serta	36	59	388	0	0	0	Ebola
+979196045	Bernardo Cunha Mateus Farias	Coruche	62	602	29	0	0	0	Covid-19
+244697486	Valdemar Carneiro Quadros Aguiar Sequeira	Guimaraes	36	592	16	1	13	0	Covid-19
+310703998	Daniel Carvalheira Proenca Carneiro	Vila Verde	45	40	330	0	0	0	Ebola
+208890120	Francisca Moreira Arouca Cardoso	Mertola	52	742	292	0	0	0	Paludismo
+724694909	Boris Leal Eanes Peres Pinto	Lagos	23	749	275	0	0	0	Paludismo
+780878921	Duarte Domingos Valbom Rosado Eanes	Valenca	63	44	338	0	0	0	Ebola
+666450841	Camilo Dinis Martins Carrico Amora	Anadia	52	71	358	1	52	0	Ebola
+279713777	Dulce Lopes Mendes Mourao	Ponte de Lima	58	95	343	0	0	0	Ebola
+218680654	Celina Vivas Matos Calheiros Brito	Mangualde	26	802	308	0	0	0	Paludismo
+887999947	Dina Amado Vivas Pinheiro Peres	Torres Novas	20	213	28	0	0	0	Ebola
+749053363	Hugo Caneco Proenca Caiado Bacelar	Povoa de Lanhoso	27	593	17	0	0	0	Covid-19
+838643945	Carina Castanheira Eanes Pinto	Ribeira de Pena	39	572	10	0	0	0	Covid-19
+797230985	Ricardo Ferraz Moreira Carmona	Pampilhosa da Serra	68	755	299	0	0	0	Paludismo
+071903154	Cristiana Cipriano Andrade Soeiro Brito	Lisboa	68	600	25	0	0	0	Covid-19
+698396883	Bernardo Sequeira Amorim Moreira Mota	Figueira de Castelo Rodrigo	23	355	99	1	9	0	Covid-19
+762448810	Pedro Dias Carrico Matos Ramalho	Vila Vicosa	23	108	343	0	0	0	Ebola
+507222886	Vitor Mateus Coelho Calheiros	Povoa de Lanhoso	45	281	12	0	0	0	Ebola
+609490877	Alzinda Dias Azeredo Carmona Nascimento	Tomar	67	775	276	0	0	0	Paludismo
+029948305	Lucas Bogas Almeida Cunha Mora	Viana do Castelo	68	770	731	1	0	0	Paludismo
+862538585	Rodolfo Ferraz Regueira Peres Azenha	Lisboa	21	797	322	0	0	0	Paludismo
+690192634	Soraia Sequeira Paredes Moreira Nunes	Valpacos	40	52	334	0	0	0	Ebola
+464627452	David Pinto Mendes Antunes	Vimioso	61	237	31	0	0	0	Ebola
+972248693	Paula Leal Santos Rego Sequeira	Barcelos	43	745	277	0	0	0	Paludismo
+519071061	Valdemar Ferreira Nogueira Barros Regueira	Povoa de Varzim	21	65	392	0	0	0	Ebola
+387976019	Pedro Macedo Rocha Lobato Valbom	Castelo de Paiva	39	266	0	0	0	0	Ebola
+882239440	Maria Vivas Almada Castanheira	Trofa	23	772	281	0	0	0	Paludismo
+316344306	Clotilde Queiros Aguiar Nunes	Covilha	55	758	265	0	0	0	Paludismo
+593116041	Dina Andrade Leao Brito	Castelo de Paiva	34	264	31	0	0	0	Ebola
+332192235	Hugo Mora Fonseca Pires Bogas	Elvas	19	148	9	1	0	0	Paludismo
+535702936	Celso Silva Leal Leao Pires	Barcelos	28	228	22	0	0	0	Ebola
+675451101	Basilio Brito Barbosa Azenha Lobato	Esposende	19	229	26	0	0	0	Ebola
+635999504	Valdemar Nogueira Leao Pires Clementino	Armamar	52	90	334	0	0	0	Ebola
+304181436	Dolores Rego Rocha Baptista Domingos	Pampilhosa da Serra	40	771	250	0	0	0	Paludismo
+228249652	Eduardo Martins Ferraz Ferro Rosado	Mortagua	50	600	24	0	0	0	Covid-19
+152666842	Rita Pinto Soeiro Carreira	Figueira da Foz	19	576	6	0	0	0	Covid-19
+380331011	Clarice Soeiro Nunes Antunes Farias	Lousada	51	324	82	0	0	0	Covid-19
+017116112	Valdemar Lobato Clementino Antunes Barros	Vila Nova de Gaia	59	282	30	0	0	0	Ebola
+384022317	Daniel Pires Nogueira Mendes Caiado	S. Joao da Pesqueira	24	261	42	0	0	0	Ebola
+283798201	Eduardo Domingos Rego Paredes Cabral	Pinhel	24	785	281	0	0	0	Paludismo
+565044826	Paulo Pacheco Moura Real Andrade	Oleiros	35	811	305	0	0	0	Paludismo
+983799933	Joana Caiado Estrela Caneco Amorim	Leiria	23	591	26	0	0	0	Covid-19
+059244402	Cristiana Vivas Antunes Mateus Cunha	Viana do Alentejo	58	275	20	0	0	0	Ebola
+149866402	Bernardo Arantes Soeiro Castro Nogueira	Vila Real	19	98	345	0	0	0	Ebola
+046803865	Daniel Carmona Regueira Andrade Castro	Ponte da Barca	62	317	108	0	0	0	Covid-19
+830281693	Cristiano Santos Brito Moura Azevedo	Alijo	26	333	100	0	2	0	Covid-19
+170261157	Cristina Soeiro Carvalheira Queiros Arantes	Sever do Vouga	26	800	307	0	0	0	Paludismo
+385563226	Soraia Amado Ramalho Bogas	Satao	22	247	1	0	9	0	Ebola
+266156888	Luis Soeiro Almeida Brito	Vale de Cambra	70	107	314	0	0	0	Ebola
+024031974	Carla Ramalho Pires Carrico Dias	Penamacor	57	139	337	0	0	0	Ebola
+329163970	Clotilde Silva Real Lobato Queiros	Mafra	31	105	340	0	0	0	Ebola
+167138248	Carmo Domingos Vivas Cipriano Silva	Tomar	19	65	379	0	0	0	Ebola
+332497868	Boris Azeredo Farias Barbosa Eanes	Pinhel	23	116	322	0	0	0	Ebola
+217891958	Francisca Aguiar Martins Fonseca Leal	Figueira da Foz	43	128	324	0	0	0	Ebola
+916674962	Eduarda Vivas Belchior Pacheco Brito	Rio Maior	63	121	347	0	0	0	Ebola
+857508755	Liliana Mota Ferreira Almeida Queiros	Porto	21	93	309	0	0	0	Ebola

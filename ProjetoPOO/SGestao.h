@@ -12,24 +12,26 @@ using namespace std;
 #include "Cidade.h"
 #include <map>
 
+
+/*POR FAVOR, CHEQUEM ESSES COMENTÁRIOS E ANALISEM SE ESSAS FUNÇÕES COMENTADAS SÃO NECESSÁRIAS OU NÃO!*/
 class SGestao
 {
 	private:
-		//----- Atributos -----//
-		list<Pessoa*> Lista_Pessoas; // Lista de pessoas do sistema
-		list<Virus *> Lista_Virus; // Lista de vírus cadastrados
-		list<Pessoa*> L_Infetados; // Lista de pessoas infetadas
-		list<Pessoa*> L_Quarentena; // Lista de pessoas em quarentena
+		/* ATRIBUTOS DA CLASSE GESTÃO */
+		list<Pessoa*> Lista_Pessoas; 
+		list<Virus *> Lista_Virus; 
+		list<Pessoa*> L_Infetados; 
+		list<Pessoa*> L_Quarentena; 
 		list<Pessoa*> L_Falecidos;
 		list<Cidade*> CIDADES;
 		vector<Ponto*> MovimentosPossiveis;
 	public:	
-		//----- Construtores e destrutores são públicos -----
+		/*CONSTRUTORES E DESTRUTORES*/
 
 		SGestao();
 		virtual ~SGestao();
 
-		//----- Métodos Pedidos -----
+		/*MÉTODOS PEDIDOS NO ENUNCIADO*/
 
 		bool Load(const string &N_Ficheiro);
 		int Contar(Virus* X);
@@ -48,7 +50,7 @@ class SGestao
 		list<Ponto*>* Possivel_Zona_Ir_A_B(Ponto& A, Ponto& B);
 
 protected:
-		//----- Métodos extras ----- 
+		/*MÉTODOS EXTRAS*/
 		bool Run();
 
 		bool Load_Falecidos(const string& N_Ficheiro);
@@ -70,9 +72,9 @@ protected:
 		Virus* GetVirus(string i);
 		vector<Ponto*>* GetMovimentosPossiveis() { return &MovimentosPossiveis; }
 
-		bool HaInfetadoPosicao(Ponto& P);
-		
-		//----- AUX Menu ------
+		bool HaInfetadoPosicao(Ponto* P);
+
+		/* MENUS AUXILIARES */
 		void MenuContarVirus();
 		void MenuFonteContagio();
 		void MenuEliminarVirus();
