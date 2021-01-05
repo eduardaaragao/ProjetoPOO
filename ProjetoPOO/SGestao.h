@@ -73,7 +73,8 @@ protected:
 		vector<Ponto*>* GetMovimentosPossiveis() { return &MovimentosPossiveis; }
 
 		bool HaInfetadoPosicao(Ponto* P);
-
+		bool HaInfetadoZona(Ponto* P);
+		int ZonaVirus(Pessoa* P);
 		/* MENUS AUXILIARES */
 		void MenuContarVirus();
 		void MenuFonteContagio();
@@ -82,6 +83,7 @@ protected:
 		void Menu_Andar_Entre_Pontos();
 		void Menu_Mostrar_Dados();
 		void MenuEscalao();
+		void Menu_Possivel_Ir_Zona();
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);
 };
