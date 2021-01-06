@@ -83,6 +83,7 @@ protected:
 		void Menu_Andar_Entre_Pontos();
 		void Menu_Mostrar_Dados();
 		void MenuEscalao();
+		void Menu_Alerta();
 		void Menu_Possivel_Ir_Zona();
 		//-----Auxiliares-------
 		//int escalaoIdade(int idade);
