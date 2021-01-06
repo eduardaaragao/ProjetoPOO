@@ -1,6 +1,6 @@
-﻿  SGestao.cpp
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(365,19): warning C4101: 'teste': variável local não referenciada
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(532,45): warning C4244: '=': conversão de 'double' para 'int', possível perda de dados
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(523): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
-C:\Users\eduar\ProjetoPOO\ProjetoPOO\SGestao.cpp(611): warning C4715: 'SGestao::Possivel_Zona_Ir_A_B': nem todos os caminhos de controle retornam um valor
-  ProjetoPOO.vcxproj -> C:\Users\eduar\ProjetoPOO\Debug\ProjetoPOO.exe
+﻿  Pessoa.cpp
+  SGestao.cpp
+  Gerando Código...
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(566): warning C4715: 'SGestao::Possivel_Zona_Ir_A_B': nem todos os caminhos de controle retornam um valor
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(507): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Desktop\ProjetoPOO\Debug\ProjetoPOO.exe

@@ -34,7 +34,7 @@ private:
 		void FuiInfetado(Virus* V) { Virus_Contraidos.push_back(V);}
 		int Memoria();
 		bool Morrer();
-
+		bool Curar();
 		//---- Sets -----
 		void set_eBaseContagio(bool estado) { eBaseContagio = estado; }
 		void Set_ContagiosProvocados(int X) { ContagiosProvocados = X; }
