@@ -62,7 +62,7 @@ protected:
 		void Mostrar_L_Pessoas();
 
 		void LancarVirus();
-		bool AfectarVirusPessoa(Virus* V, Pessoa* P);
+		bool InfetarVirusPessoa(Virus* V, Pessoa* P);
 		void PassarVirus(Virus* V);
 
 		void Mostrar_Casos_Cidades();
@@ -85,7 +85,5 @@ protected:
 		void MenuEscalao();
 		void Menu_Alerta();
 		void Menu_Possivel_Ir_Zona();
-		//-----Auxiliares-------
-		//int escalaoIdade(int idade);
 };
 

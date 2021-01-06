@@ -1,4 +1,4 @@
-609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59
+609140307	Carla Aguiar Cunha Paredes Pires	Viseu	59	10	20
 814991297	Ricardo Andrade Nogueira Matos	Manteigas	62
 843818099	Eduardo Carneiro Paredes Clementino Castro	Pacos de Ferreira	67
 647507641	Cristiana Eanes Almada Martins Baptista	Amarante	58

@@ -1,6 +1,4 @@
-﻿  Ponto.cpp
-  SGestao.cpp
-  Generating Code...
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\SGestao.cpp(551): warning C4715: 'SGestao::PossivelIr_A_B': not all control paths return a value
-C:\Users\PC\Desktop\POO\ProjetoPOO\ProjetoPOO\SGestao.cpp(610): warning C4715: 'SGestao::Possivel_Zona_Ir_A_B': not all control paths return a value
-  ProjetoPOO.vcxproj -> C:\Users\PC\Desktop\POO\ProjetoPOO\Debug\ProjetoPOO.exe
+﻿  SGestao.cpp
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(550): warning C4715: 'SGestao::PossivelIr_A_B': nem todos os caminhos de controle retornam um valor
+C:\Users\gca9\Desktop\ProjetoPOO\ProjetoPOO\SGestao.cpp(609): warning C4715: 'SGestao::Possivel_Zona_Ir_A_B': nem todos os caminhos de controle retornam um valor
+  ProjetoPOO.vcxproj -> C:\Users\gca9\Desktop\ProjetoPOO\Debug\ProjetoPOO.exe
